@@ -89,7 +89,7 @@
       "/performances/hor",
       "/performances/les-elephants",
       "/performances/lot-radio",
-      "/pages/radio-pirate/radio-pirate.html",
+      "https://wddc-slipknot.webflow.io/performances/radio-pirate",
       "/performances/teller",
       "/performances/tekno-birrette",
     ];
