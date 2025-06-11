@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Model loader
   const loader = new THREE.GLTFLoader();
   loader.load(
-    "https://cdn.jsdelivr.net/gh/daveee00/export_blender/vena.glb",
+    "https://cdn.jsdelivr.net/gh/daveee00/export_blender/hor.glb",
     function (gltf) {
       model = gltf.scene;
       model.scale.set(10, 10, 10);
