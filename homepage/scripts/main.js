@@ -879,7 +879,7 @@
         // Add coming soon image if model is in construction
         if (isInConstruction) {
           const comingSoonImg = document.createElement('img');
-          comingSoonImg.src = 'coming-soon.svg';
+          comingSoonImg.src = 'https://rcrdme-gnmr.netlify.app/homepage/coming-soon.svg';
           comingSoonImg.style.position = 'absolute';
           comingSoonImg.style.top = '32px';
           comingSoonImg.style.right = '32px';
