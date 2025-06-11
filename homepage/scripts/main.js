@@ -65,7 +65,7 @@
 
     // MODELS TO LOAD
     const modelsToLoad = [
-      "https://rcrdme-gnmr.netlify.app/blender-exp/clubdervisionere.glb",
+      "https://rcrdme-gnmr-blender.netlify.app/clubdervisionere.glb",
       "https://cdn.jsdelivr.net/gh/daveee00/export_blender/elsewhere.glb",
       "https://cdn.jsdelivr.net/gh/daveee00/export_blender/vena.glb",
       "https://cdn.jsdelivr.net/gh/daveee00/export_blender/forTheCause.glb",
