@@ -94,22 +94,6 @@
       "/performances/tekno-birrette",
     ];
 
-    //page performance css
-    const pageStyles = [
-      "https://cdn.jsdelivr.net/gh/daveee00/scripts-for-the-cause-test/ftc.css",
-      "https://cdn.jsdelivr.net/gh/daveee00/scripts-for-the-cause-test/ftc.css",
-      "https://cdn.jsdelivr.net/gh/daveee00/scripts-for-the-cause-test/ftc.css",
-      "https://cdn.jsdelivr.net/gh/daveee00/scripts-for-the-cause-test/ftc.css",
-      "https://cdn.jsdelivr.net/gh/daveee00/scripts-for-the-cause-test/ftc.css",
-      "https://cdn.jsdelivr.net/gh/daveee00/scripts-for-the-cause-test/ftc.css",
-      "https://cdn.jsdelivr.net/gh/daveee00/scripts-for-the-cause-test/ftc.css",
-      "https://cdn.jsdelivr.net/gh/daveee00/scripts-for-the-cause-test/ftc.css",
-      "https://cdn.jsdelivr.net/gh/daveee00/scripts-for-the-cause-test/ftc.css",
-      "https://cdn.jsdelivr.net/gh/daveee00/scripts-for-the-cause-test/ftc.css",
-      "https://cdn.jsdelivr.net/gh/daveee00/scripts-for-the-cause-test/ftc.css",
-      "https://cdn.jsdelivr.net/gh/daveee00/scripts-for-the-cause-test/ftc.css",
-    ];
-
     // backgrounds for active page
     const vinylBackground = [
       "linear-gradient(270deg, #EEDC9A, #F5EEC0, #D6BB7D)",
