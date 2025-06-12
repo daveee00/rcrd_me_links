@@ -83,15 +83,31 @@
       "/performances/club-der-visionaire",
       "/performances/elsewhere",
       "/pages/vena/vena.html",
-      "https://wddc-slipknot.webflow.io/performances/for-the-cause",
+      "/pages/for-the-cause/for-the-cause.html",
       "/performances/goa-last-dance",
       "/performances/haudio",
       "/performances/hor",
       "/performances/les-elephants",
       "/performances/lot-radio",
-      "https://wddc-slipknot.webflow.io/performances/radio-pirate",
+      "/pages/radio-pirate/radio-pirate.html",
       "/performances/teller",
       "/performances/tekno-birrette",
+    ];
+
+    //page performance css
+    const pageStyles = [
+      "https://cdn.jsdelivr.net/gh/daveee00/scripts-for-the-cause-test/ftc.css",
+      "https://cdn.jsdelivr.net/gh/daveee00/scripts-for-the-cause-test/ftc.css",
+      "https://cdn.jsdelivr.net/gh/daveee00/scripts-for-the-cause-test/ftc.css",
+      "https://cdn.jsdelivr.net/gh/daveee00/scripts-for-the-cause-test/ftc.css",
+      "https://cdn.jsdelivr.net/gh/daveee00/scripts-for-the-cause-test/ftc.css",
+      "https://cdn.jsdelivr.net/gh/daveee00/scripts-for-the-cause-test/ftc.css",
+      "https://cdn.jsdelivr.net/gh/daveee00/scripts-for-the-cause-test/ftc.css",
+      "https://cdn.jsdelivr.net/gh/daveee00/scripts-for-the-cause-test/ftc.css",
+      "https://cdn.jsdelivr.net/gh/daveee00/scripts-for-the-cause-test/ftc.css",
+      "https://cdn.jsdelivr.net/gh/daveee00/scripts-for-the-cause-test/ftc.css",
+      "https://cdn.jsdelivr.net/gh/daveee00/scripts-for-the-cause-test/ftc.css",
+      "https://cdn.jsdelivr.net/gh/daveee00/scripts-for-the-cause-test/ftc.css",
     ];
 
     // backgrounds for active page
@@ -667,6 +683,10 @@
       selectedRenderer.toneMapping = THREE.ACESFilmicToneMapping;
       selectedRenderer.toneMappingExposure = 0.8;
 
+      // Store references in window object for access in click handler
+      window.selectedScene = selectedScene;
+      window.selectedModel = null;
+
       // Load the model again to ensure proper materials and geometries
       const loader = new THREE.GLTFLoader();
       loader.load(
@@ -684,6 +704,7 @@
           );
           
           selectedScene.add(modelClone);
+          window.selectedModel = modelClone;
 
           // Animation function for the selected model
           function animateSelected() {
@@ -867,7 +888,47 @@
           // Add click event to navigate to the corresponding page
           playButton.addEventListener('click', () => {
             const targetUrl = pageLinks[clickedIndex];
-            window.open(targetUrl, '_self');
+            
+            if (window.selectedModel) {
+              // Stop the continuous rotation
+              window.selectedModel.rotation.y = window.selectedModel.rotation.y;
+              
+              // Create a timeline for sequenced animations
+              const tl = gsap.timeline({
+                onComplete: () => {
+                  window.open(targetUrl, '_self');
+                }
+              });
+
+              // First animate the rotation
+              tl.to(window.selectedModel.rotation, {
+                x: THREE.MathUtils.degToRad(0),
+                y: THREE.MathUtils.degToRad(180),
+                z: THREE.MathUtils.degToRad(90),
+                duration: 3.5,
+                ease: "power2.inOut"
+              })
+              // Then animate the position, starting earlier for smoother transition
+              .to(window.selectedModel.position, {
+                y: -200,
+                duration: 3.5,
+                ease: "power1.inOut",
+                onUpdate: () => {
+                  // Check if model is about to leave the viewport
+                  const modelPosition = window.selectedModel.position.y;
+                  const viewportHeight = window.innerHeight;
+                  const modelHeight = window.selectedModel.scale.y * 2; // Approximate model height
+                  const modelBottom = modelPosition + modelHeight/2;
+                  
+                  // If model is about to leave the viewport (just 10% remaining visible)
+                  if (modelBottom < -viewportHeight * 0.1) {
+                    window.open(targetUrl, '_self');
+                  }
+                }
+              }, "-=1.2"); // Start 1.2 seconds before the previous animation ends
+            } else {
+              window.open(targetUrl, '_self');
+            }
           });
 
           modelBackground.appendChild(playButton);
@@ -879,7 +940,7 @@
         // Add coming soon image if model is in construction
         if (isInConstruction) {
           const comingSoonImg = document.createElement('img');
-          comingSoonImg.src = 'https://rcrdme-gnmr.netlify.app/homepage/coming-soon.svg';
+          comingSoonImg.src = 'coming-soon.svg';
           comingSoonImg.style.position = 'absolute';
           comingSoonImg.style.top = '32px';
           comingSoonImg.style.right = '32px';
