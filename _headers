@@ -1,2 +1,5 @@
 /blender-exp/*
   Access-Control-Allow-Origin: *
+
+/homepage/*
+  Access-Control-Allow-Origin: *
