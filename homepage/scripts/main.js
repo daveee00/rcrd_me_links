@@ -81,7 +81,7 @@
     // PAGE LINKS
     const pageLinks = [
       "/performances/club-der-visionaire",
-      "/performances/elsewhere",
+      "https://wddc-slipknot.webflow.io/performances/elsewhere-seoul",
       "/pages/vena/vena.html",
       "https://wddc-slipknot.webflow.io/performances/for-the-cause",
       "/performances/goa-last-dance",
