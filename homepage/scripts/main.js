@@ -86,7 +86,7 @@
       "https://wddc-slipknot.webflow.io/performances/for-the-cause",
       "/performances/goa-last-dance",
       "/performances/haudio",
-      "/performances/hor",
+      "https://wddc-slipknot.webflow.io/performances/hor",
       "/performances/les-elephants",
       "/performances/lot-radio",
       "https://wddc-slipknot.webflow.io/performances/radio-pirate",
