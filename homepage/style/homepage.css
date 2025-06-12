@@ -2909,7 +2909,7 @@
   .content-08 {
     grid-row: span 5;
     grid-column: span 2;
-    background: url(/gnmr-about.png);
+    background: url(https://rcrdme-gnmr.netlify.app/homepage/gnmr-about.png);
     background-size: cover;
     background-position: center;
   }
