@@ -83,7 +83,7 @@
       "/performances/club-der-visionaire",
       "/performances/elsewhere",
       "/pages/vena/vena.html",
-      "/pages/for-the-cause/for-the-cause.html",
+      "https://wddc-slipknot.webflow.io/performances/for-the-cause",
       "/performances/goa-last-dance",
       "/performances/haudio",
       "/performances/hor",
