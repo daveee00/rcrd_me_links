@@ -91,7 +91,7 @@
       "/performances/lot-radio",
       "https://wddc-slipknot.webflow.io/performances/radio-pirate",
       "/performances/teller",
-      "/performances/tekno-birrette",
+      "https://wddc-slipknot.webflow.io/performances/tekno-birrette",
     ];
 
     //page performance css
