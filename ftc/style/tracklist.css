@@ -49,6 +49,7 @@
   text-transform: uppercase;
   display: flex;
   align-items: center;
+  margin-bottom: 8px;
 }
 
 #tracklist-artist {
@@ -125,7 +126,7 @@
 .scroll-text-section .text {
   display: inline-block;
   padding-right: 40px;
-  font-family: "VCR OSD Mono";
+  font-family: "ibm-plex-mono", sans-serif;
   font-size: 3rem;
   font-weight: bold;
   white-space: nowrap;
