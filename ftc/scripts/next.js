@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Model loader
   const loader = new THREE.GLTFLoader();
   loader.load(
-    "https://rcrdme-gnmr.netlify.app/blender-exp/elsewhere.glb",
+    "https://rcrdme-gnmr.netlify.app/blender-exp/hor.glb",
     function (gltf) {
       model = gltf.scene;
       model.scale.set(10, 10, 10);
