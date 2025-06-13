@@ -73,7 +73,8 @@ footer {
   border: none;
   position: absolute;
   transform: rotate(90deg);
-  right: 16px;
+  right: 32px !important;
+  margin-right: 32px;
   bottom: 20%;
   padding: 0;
   cursor: pointer;
@@ -82,7 +83,7 @@ footer {
 .footer-back-to-top {
   display: none;
   position: fixed;
-  right: 32px;
+  right: 64px !important;
   bottom: 8%;
   background: none;
   color: #fff;
