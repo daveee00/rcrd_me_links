@@ -1,0 +1,673 @@
+/* Combined CSS file for For The Cause page */
+
+/* ===== perfromance title ===== */
+
+body {
+  background: black;
+}
+
+#page-top {
+  width: 100%;
+  height: 10vh;
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.header-rp {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around !important;
+  align-items: center;
+  position: relative;
+  margin-bottom: 8%;
+}
+
+.header-rp .performance-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: top;
+  z-index: 1;
+  mix-blend-mode: overlay;
+}
+
+.header-rp .performance-title img {
+  width: 50%;
+  margin-top: 8%;
+}
+
+.header-rp .date-container .performance-date {
+  font-size: 20px;
+}
+
+/* ===== for the cause ===== */
+* {
+  font-family: "ibm-plex-mono", sans-serif;
+  color: #fbfb6e;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.page-wrapper {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  min-height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.page-background {
+  background: url(https://cdn.jsdelivr.net/gh/daveee00/scripts-for-the-cause-test/assets/sfondo-texture-ftc-smallest.png);
+  background-size: cover;
+}
+
+.shade {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.header-4 {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around !important;
+  align-items: center;
+  position: relative;
+  margin-bottom: 8%;
+  overflow-x: hidden;
+}
+
+/*––––––––––––––––––––––––––––––––-*/
+
+main {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.first-section {
+  margin-top: 240px;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Center the main-media-wrapper and give it a pink background */
+.first-section .main-media-wrapper {
+  position: relative;
+  width: 80vw;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  animation: videoPulse 2s ease-in-out infinite;
+}
+
+@keyframes videoPulse {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.02);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.first-section .main-media-wrapper video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/*––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
+
+.second-text {
+  height: fit-content;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 80px;
+  margin-bottom: 200px;
+  opacity: 0;
+}
+
+.second-text.animate {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.second-text::before {
+  content: "";
+  width: 400px;
+  height: 2px;
+  background: #fbfb6e;
+  margin-bottom: 40px;
+  transform: scaleX(0);
+  transform-origin: center;
+}
+
+.second-text.animate::before {
+  animation: lineGrow 2s ease-out forwards, lineStretch 3s ease-in-out infinite;
+  animation-delay: 0.8s, 2.8s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes lineGrow {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes lineStretch {
+  0% {
+    width: 400px;
+  }
+  50% {
+    width: 600px;
+  }
+  100% {
+    width: 400px;
+  }
+}
+
+.second-text .second-text-content {
+  width: 85%;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/*–––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
+
+.second-section {
+  width: 100%;
+  position: relative;
+  z-index: 15;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+  height: 200vh;
+  overflow: hidden;
+}
+
+.second-section img {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  opacity: 1;
+  pointer-events: none;
+  will-change: opacity;
+}
+
+.text-second-section {
+  position: relative;
+  z-index: 2;
+  margin-top: 100vh;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  color: #fbfb6e;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 2rem;
+  text-align: left;
+  font-weight: 500;
+  width: 70vw;
+}
+
+.text-second-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/*–––––––––––––*/
+
+.grid-section {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: repeat(1, minmax(0, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+  align-items: center;
+  padding: 16% 64px 8% 64px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.grid-section.animate {
+  animation: fadeInGrid 1s ease-out forwards;
+}
+
+.grid-section.exit {
+  animation: fadeOutGrid 0.5s ease-in forwards;
+}
+
+.grid-section > * {
+  aspect-ratio: 1/1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.5s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.grid-section > *::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(251, 251, 110, 0.1);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.grid-section > *:hover {
+  transform: scale(1.05);
+  z-index: 2;
+}
+
+.grid-section > *:hover::after {
+  opacity: 1;
+}
+
+.grid-section > *:nth-child(1) {
+  transform: translateX(-50px);
+  opacity: 0;
+}
+
+.grid-section > *:nth-child(2) {
+  transform: translateY(50px);
+  opacity: 0;
+}
+
+.grid-section > *:nth-child(3) {
+  transform: translateX(50px);
+  opacity: 0;
+}
+
+.grid-section.animate > *:nth-child(1) {
+  animation: slideInLeft 1s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+.grid-section.animate > *:nth-child(2) {
+  animation: slideInUp 1s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+.grid-section.animate > *:nth-child(3) {
+  animation: slideInRight 1s ease-out forwards;
+  animation-delay: 0.7s;
+}
+
+.grid-section.exit > *:nth-child(1) {
+  animation: slideOutLeft 0.5s ease-in forwards;
+}
+
+.grid-section.exit > *:nth-child(2) {
+  animation: slideOutDown 0.5s ease-in forwards;
+}
+
+.grid-section.exit > *:nth-child(3) {
+  animation: slideOutRight 0.5s ease-in forwards;
+}
+
+@keyframes fadeInGrid {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOutGrid {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutLeft {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+}
+
+@keyframes slideOutDown {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+}
+
+@keyframes slideOutRight {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+}
+
+/*–––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
+.check {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.tracklist-section {
+  width: 100vw;
+  height: 90vh;
+  position: relative;
+  margin-bottom: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 64px;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+.tracklist-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0px 32px;
+}
+
+#vinile {
+  height: 80%;
+  aspect-ratio: 1/1;
+}
+
+#track-infos {
+  height: 80%;
+  aspect-ratio: 4/3;
+  display: grid;
+  grid-template-rows: repeat(8, minmax(0, 1fr));
+  gap: 8px;
+}
+
+#tracklist-title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+}
+
+#tracklist-artist {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 64px;
+}
+
+.side {
+  font-size: 1.2rem;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: left;
+}
+
+.side-name {
+  opacity: calc(50%);
+}
+
+.tracklist-section .tracklist-infos .side .track-name {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.track-link {
+  text-decoration: none;
+  color: white;
+}
+
+.arrow {
+  font-weight: 400;
+  display: none;
+}
+
+.track-link:hover .arrow {
+  display: inline;
+  text-decoration: none;
+}
+
+/*========================================*/
+
+.scroll-text-section {
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.8) 100%
+      );
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  padding: 128px 0px 0px 0px;
+  mix-blend-mode: overlay;
+}
+
+.scroll-wrapper {
+  display: inline-flex;
+  animation: scroll 40s linear infinite;
+  white-space: nowrap;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.scroll-text-section .text {
+  display: inline-block;
+  padding-right: 40px;
+  font-family: "Acki";
+  font-size: 3rem;
+  font-weight: bold;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+/* ===== footer  ===== */
+footer {
+  height: fit-content;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  padding: 8% 80px;
+  justify-content: bottom;
+  align-items: center;
+  position: relative;
+}
+
+#previous,
+#next {
+  z-index: 5;
+}
+
+.navigation-perfromance {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  justify-content: space-between;
+}
+
+.video_background {
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  overflow: hidden;
+}
+
+.video_background video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.3;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.navigation-text-wrapper {
+  height: 64px;
+  color: white;
+  opacity: 0.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navigation-text {
+  color: white;
+  font-size: 1em;
+  text-transform: uppercase;
+  text-align: center;
+  height: fit-content;
+}
+
+#back-to-top {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  background: none;
+  border: none;
+  position: absolute;
+  transform: rotate(90deg);
+  right: 16px;
+  bottom: 16%;
+  padding: 0;
+  cursor: pointer;
+}
+
+/*––––––––––––––––––––––––––––––––––*/
+
+.transition-container {
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  background: rgb(0, 0, 0);
+  position: fixed;
+  top: 0;
+  left: 0;
+}
