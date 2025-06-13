@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teknobirrette</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="ui-elements.css" />
+    <link rel="stylesheet" href="footer.css" />
+    <link rel="stylesheet" href="header.css" />
+    <link rel="stylesheet" href="tracklist.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--  Three.js  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!--  GLTFLoader  -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+    <!--  OrbitControls  -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <!--  GSAP  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <!--adobe font pack-->
+    <link rel="stylesheet" href="https://use.typekit.net/ebg1rxk.css" />
+
+    <style>
+      .transition-container {
+        width: 100vw;
+        height: 100vh;
+        z-index: 1000;
+        background: rgb(0, 0, 0);
+        position: fixed;
+        top: 0;
+        left: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="transition-container" id="transition-container"></div>
+    <div class="page-wrapper">
+      <div class="page-background">
+        <div id="page-top"></div>
+        <div class="shade"></div>
+
+        <!-- UI Elements -->
+        <div class="ui-elements">
+          <div class="scroll-indicator">
+            <div class="scroll-text">SCROLL</div>
+            <div class="scroll-line"></div>
+          </div>
+          <div class="buttons-container to-hide">
+            <a
+              href="https://open.spotify.com/artist/75RzB9VfL9n40eqv6zIFQm?si=tZTVVjepSaGmmZRjLcC-jA"
+              class="sp-link w-inline-block"
+              target="_blank"
+              ><img
+                loading="lazy"
+                src="https://cdn.jsdelivr.net/gh/daveee00/scripts-for-the-cause-test/assets/spotify-brands.svg"
+                alt=""
+                class="image-7"
+            /></a>
+            <a
+              href="https://on.soundcloud.com/yZSl4j8X86FB29xeiU"
+              class="ap-music-link w-inline-block"
+              target="_blank"
+              ><img
+                loading="lazy"
+                src="https://cdn.jsdelivr.net/gh/daveee00/scripts-for-the-cause-test/assets/soundcloud.svg"
+                alt=""
+                class="image-8"
+            /></a>
+            <a
+              href="https://www.instagram.com/gnmr____?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+              class="ig-link w-inline-block"
+              target="_blank"
+              ><img
+                loading="lazy"
+                src="https://cdn.jsdelivr.net/gh/daveee00/scripts-for-the-cause-test/assets/instagram-brands.svg"
+                alt=""
+                class="image-9"
+            /></a>
+          </div>
+          <div class="home-button">
+            <a href="../../index.html" data-turbo="false"
+              ><svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M20 17.0002V11.4522C20 10.9179 19.9995 10.6506 19.9346 10.4019C19.877 10.1816 19.7825 9.97307 19.6546 9.78464C19.5102 9.57201 19.3096 9.39569 18.9074 9.04383L14.1074 4.84383C13.3608 4.19054 12.9875 3.86406 12.5674 3.73982C12.1972 3.63035 11.8026 3.63035 11.4324 3.73982C11.0126 3.86397 10.6398 4.19014 9.89436 4.84244L5.09277 9.04383C4.69064 9.39569 4.49004 9.57201 4.3457 9.78464C4.21779 9.97307 4.12255 10.1816 4.06497 10.4019C4 10.6506 4 10.9179 4 11.4522V17.0002C4 17.932 4 18.3978 4.15224 18.7654C4.35523 19.2554 4.74432 19.6452 5.23438 19.8482C5.60192 20.0005 6.06786 20.0005 6.99974 20.0005C7.93163 20.0005 8.39808 20.0005 8.76562 19.8482C9.25568 19.6452 9.64467 19.2555 9.84766 18.7654C9.9999 18.3979 10 17.932 10 17.0001V16.0001C10 14.8955 10.8954 14.0001 12 14.0001C13.1046 14.0001 14 14.8955 14 16.0001V17.0001C14 17.932 14 18.3979 14.1522 18.7654C14.3552 19.2555 14.7443 19.6452 15.2344 19.8482C15.6019 20.0005 16.0679 20.0005 16.9997 20.0005C17.9316 20.0005 18.3981 20.0005 18.7656 19.8482C19.2557 19.6452 19.6447 19.2554 19.8477 18.7654C19.9999 18.3978 20 17.932 20 17.0002Z"
+                  stroke="#ffffff"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Header -->
+        <header class="header-rp">
+          <h1 class="radio-title">TEKNOBIRRETTE</h1>
+          <div class="date">26.07.2023 in Padova</div>
+        </header>
+        <div class="overlay">
+          <div class="title-container">
+            <h1 class="radio-title">TEKNOBIRRETTE</h1>
+            <div class="date">26.07.2023 in Padova</div>
+          </div>
+          <!-- Main Content -->
+          <div class="overlay">
+            <div class="video-box">
+              <video id="main-video" autoplay muted playsinline>
+                <source
+                  src="https://rcrdme-gnmr.netlify.app/tekno-birrette/video1.mp4"
+                  type="video/mp4"
+                />
+                Il tuo browser non supporta il video.
+              </video>
+            </div>
+
+            <h1 class="video-caption">
+              <span class="typewriter-text"></span
+              ><span class="typewriter-cursor">|</span>
+            </h1>
+
+            <div class="image-pair">
+              <div class="image-box">
+                <img
+                  src="https://rcrdme-gnmr.netlify.app/tekno-birrette/image1.jpg"
+                  alt="Immagine 1"
+                />
+              </div>
+              <div class="image-box">
+                <img
+                  src="https://rcrdme-gnmr.netlify.app/tekno-birrette/image2.jpg"
+                  alt="Immagine 2"
+                />
+              </div>
+            </div>
+
+            <div class="fullwidth-photo">
+              <img
+                src="https://rcrdme-gnmr.netlify.app/tekno-birrette/wide-image.jpg"
+                alt="Immagine panoramica"
+              />
+            </div>
+
+            <div class="text-image-section">
+              <div class="text-box">
+                <span class="typewriter-text-box"></span
+                ><span class="typewriter-cursor-box">|</span>
+              </div>
+              <div class="photo-box">
+                <img
+                  src="https://rcrdme-gnmr.netlify.app/tekno-birrette/side-image.jpg"
+                  alt="Immagine affiancata"
+                />
+              </div>
+            </div>
+
+            <div class="auto-gallery">
+              <div class="gallery-track">
+                <img
+                  src="https://rcrdme-gnmr.netlify.app/tekno-birrette/gallery1.jpg"
+                  alt="Foto 1"
+                />
+                <img
+                  src="https://rcrdme-gnmr.netlify.app/tekno-birrette/gallery2.jpg"
+                  alt="Foto 2"
+                />
+                <img
+                  src="https://rcrdme-gnmr.netlify.app/tekno-birrette/gallery3.jpg"
+                  alt="Foto 3"
+                />
+                <img
+                  src="https://rcrdme-gnmr.netlify.app/tekno-birrette/gallery1.jpg"
+                  alt="Foto 1 copia"
+                />
+                <img
+                  src="https://rcrdme-gnmr.netlify.app/tekno-birrette/gallery2.jpg"
+                  alt="Foto 2 copia"
+                />
+                <img
+                  src="https://rcrdme-gnmr.netlify.app/tekno-birrette/gallery3.jpg"
+                  alt="Foto 3 copia"
+                />
+              </div>
+            </div>
+<!--
+            <div class="track-section">
+              <div class="track-card">
+                <h2>Need Your Loving - NRG (Roni Size Touch Mix) (1995)</h2>
+                <div class="track-content">
+                  <div class="track-photo" id="vinile"></div>
+                  <img src="media/track-image.png" alt="Copertina traccia" />
+                </div>
+                <div class="track-info">
+                  <div class="track-rows">
+                    <div class="track-line">
+                      <div class="track-title side-a">
+                        SIDE A<br />
+                        Need Your Loving (Everybody's Gotta Learn Sometime) (The
+                        True Original Hardcore Mix)
+                      </div>
+                    </div>
+                    <div class="track-line">
+                      <div class="track-title">
+                        SIDE B<br />
+                        Need Your Loving (Everybody's Gotta Learn Sometime) (The
+                        Roni Size Touch Mix)
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>-->
+
+            <section class="scroll-text-section" id="scroll-text-section">
+              <div class="text">• teknoBirrette </div>
+              <div class="text">• teknoBirrette </div>
+            </section>
+
+            <section class="tracklist-section">
+              <div class="tracklist-wrapper">
+                <div id="vinile"></div>
+                <div id="track-infos">
+                  <div></div>
+                  <div ></div>
+                  <div>
+                    <div id="tracklist-title">Need Your Loving <br> Roni Size Touch Mix (1995)</div>
+                    <div id="tracklist-artist">N.R.G</div>
+                  </div>
+                  <div></div>
+                  <div class="side">
+                    <div class="side-name">side A</div>
+                      <div class="track-name">
+                        Need Your Loving (Everybody's Gotta Learn Sometime) <br>
+                        (The
+                        True Original Hardcore Mix)
+                      </div>
+                  </div>
+                  <div ></div>
+                  <div class="side">
+                    <div class="side-name">side B</div>
+                    <a href="https://www.youtube.com/watch?v=WATaSYvRf3k" class="track-link" target="_blank"
+                      ><div class="track-name">
+                        Need Your Loving (Everybody's Gotta Learn Sometime) <br> (The
+                        Roni Size Touch Mix)<span class="arrow"> &nearr;</span>
+                      </div></a
+                    >
+                  </div>
+                  <div></div>
+                  <div></div>
+                  
+                </div>
+              </div>
+            </section>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer>
+        <div
+          class="navigation-perfromance"
+          style="border-right: 2px solid rgba(255, 255, 255, 0.5)"
+        >
+          <div class="previous preview" id="previous"></div>
+          <div class="navigation-text-wrapper">
+            <div class="navigation-text">RADIO PIRATE</div>
+          </div>
+        </div>
+        <div class="navigation-perfromance">
+          <div class="next preview" id="next"></div>
+          <div class="navigation-text-wrapper">
+            <div class="navigation-text">elsewhere</div>
+          </div>
+        </div>
+      </footer>
+      <button
+        id="footer-back-to-top"
+        class="footer-back-to-top"
+        aria-label="Back to top"
+      >
+        <span class="vertical-text">Back to top</span>
+      </button>
+    </div>
+
+    <!-- Script modules -->
+    <script type="module" src="script.js"></script>
+    <script type="module" src="scroll-line.js"></script>
+    <script type="module" src="next.js"></script>
+    <script type="module" src="previous.js"></script>
+    <script type="module" src="backTop.js"></script>
+    <script type="module" src="transition.js"></script>
+    <script type="module" src="animations.js"></script>
+    <script type="module" src="model_loader.js"></script>
+  </body>
+</html>
