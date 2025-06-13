@@ -1,8 +1,18 @@
-(function () {
+document.addEventListener('DOMContentLoaded', function() {
   // Ensure Three.js is loaded
-  if (!window.THREE) return;
+  if (!window.THREE) {
+    console.error('Three.js is not loaded');
+    return;
+  }
+  
   let camera, scene, renderer, model;
-  let container = document.getElementById("brano");
+  let container = document.getElementById("vinile");
+  
+  if (!container) {
+    console.error('Container element not found');
+    return;
+  }
+  
   let clock = new THREE.Clock();
   // Set up renderer
   const width = container.clientWidth;
@@ -12,25 +22,24 @@
   camera.lookAt(0, 0, 0);
   scene = new THREE.Scene();
   // Lights
-  const hemiLight = new THREE.HemisphereLight(0xffffff, 0xffffff, 1.5);
+  const hemiLight = new THREE.HemisphereLight(0xffffff, 0xffffff, 1);
   hemiLight.position.set(10, 0, 10);
   scene.add(hemiLight);
-
 
   // Model loader
   const loader = new THREE.GLTFLoader();
   loader.load(
-    "https://cdn.jsdelivr.net/gh/daveee00/export_blender/westphalia.glb", // <-- update this path if needed
+    "https://rcrdme-gnmr.netlify.app/blender-exp/disco1994clubmix.glb",
     function (gltf) {
       model = gltf.scene;
       model.scale.set(6, 6, 6);
       model.position.set(0, 0, 0);
-      model.rotation.set(Math.PI / 2, 0, Math.PI / 2); // 90deg in radians
+      model.rotation.set(Math.PI / 2, 0, Math.PI / 2);
       scene.add(model);
     },
     undefined,
     function (e) {
-      console.error(e);
+      console.error("Error loading model:", e);
     }
   );
 
@@ -47,16 +56,14 @@
     camera.updateProjectionMatrix();
     renderer.setSize(w, h);
   });
+
   // Animation loop: rotate model
   function animate() {
     requestAnimationFrame(animate);
     if (model) {
-      // Create a smooth oscillation using sine wave
-      // Using clock.getElapsedTime() for consistent timing
-      // Math.PI/4 (45 degrees) as the amplitude of oscillation
       model.rotation.y -= 0.01;
     }
     renderer.render(scene, camera);
   }
   animate();
-})();
+});
