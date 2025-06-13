@@ -65,18 +65,18 @@
 
     // MODELS TO LOAD
     const modelsToLoad = [
-      "https://cdn.jsdelivr.net/gh/daveee00/export_blender/clubDerVisionere.glb",
-      "https://cdn.jsdelivr.net/gh/daveee00/export_blender/elsewhere.glb",
-      "https://cdn.jsdelivr.net/gh/daveee00/export_blender/vena.glb",
-      "https://cdn.jsdelivr.net/gh/daveee00/export_blender/forTheCause.glb",
-      "https://cdn.jsdelivr.net/gh/daveee00/export_blender/goa.glb",
-      "https://cdn.jsdelivr.net/gh/daveee00/export_blender/haudio.glb",
-      "https://cdn.jsdelivr.net/gh/daveee00/export_blender/hor.glb",
-      "https://cdn.jsdelivr.net/gh/daveee00/export_blender/lesEnfants.glb",
-      "https://cdn.jsdelivr.net/gh/daveee00/export_blender/theLotRadio.glb",
-      "https://cdn.jsdelivr.net/gh/daveee00/export_blender/radioPirate.glb",
-      "https://cdn.jsdelivr.net/gh/daveee00/export_blender/teller.glb",
-      "https://cdn.jsdelivr.net/gh/daveee00/export_blender/teknoBirrette.glb",
+      "https://rcrdme-gnmr.netlify.app/blender-exp/clubdervisionere.glb",
+      "https://rcrdme-gnmr.netlify.app/blender-exp/elsewhere.glb",
+      "https://rcrdme-gnmr.netlify.app/blender-exp/vena.glb",
+      "https://rcrdme-gnmr.netlify.app/blender-exp/forthecause.glb",
+      "https://rcrdme-gnmr.netlify.app/blender-exp/goa.glb",
+      "https://rcrdme-gnmr.netlify.app/blender-exp/haudio.glb",
+      "https://rcrdme-gnmr.netlify.app/blender-exp/hor.glb",
+      "https://rcrdme-gnmr.netlify.app/blender-exp/lesenfants.glb",
+      "https://rcrdme-gnmr.netlify.app/blender-exp/thelotradio.glb",
+      "https://rcrdme-gnmr.netlify.app/blender-exp/radiopirate.glb",
+      "https://rcrdme-gnmr.netlify.app/blender-exp/teller.glb",
+      "https://rcrdme-gnmr.netlify.app/blender-exp/teknobirrette.glb",
     ];
     // PAGE LINKS
     const pageLinks = [
@@ -93,23 +93,7 @@
       "/performances/teller",
       "https://wddc-slipknot.webflow.io/performances/tekno-birrette",
     ];
-
-    //page performance css
-    const pageStyles = [
-      "https://cdn.jsdelivr.net/gh/daveee00/scripts-for-the-cause-test/ftc.css",
-      "https://cdn.jsdelivr.net/gh/daveee00/scripts-for-the-cause-test/ftc.css",
-      "https://cdn.jsdelivr.net/gh/daveee00/scripts-for-the-cause-test/ftc.css",
-      "https://cdn.jsdelivr.net/gh/daveee00/scripts-for-the-cause-test/ftc.css",
-      "https://cdn.jsdelivr.net/gh/daveee00/scripts-for-the-cause-test/ftc.css",
-      "https://cdn.jsdelivr.net/gh/daveee00/scripts-for-the-cause-test/ftc.css",
-      "https://cdn.jsdelivr.net/gh/daveee00/scripts-for-the-cause-test/ftc.css",
-      "https://cdn.jsdelivr.net/gh/daveee00/scripts-for-the-cause-test/ftc.css",
-      "https://cdn.jsdelivr.net/gh/daveee00/scripts-for-the-cause-test/ftc.css",
-      "https://cdn.jsdelivr.net/gh/daveee00/scripts-for-the-cause-test/ftc.css",
-      "https://cdn.jsdelivr.net/gh/daveee00/scripts-for-the-cause-test/ftc.css",
-      "https://cdn.jsdelivr.net/gh/daveee00/scripts-for-the-cause-test/ftc.css",
-    ];
-
+    
     // backgrounds for active page
     const vinylBackground = [
       "linear-gradient(270deg, #EEDC9A, #F5EEC0, #D6BB7D)",
@@ -159,11 +143,12 @@
     ];
 
     const in_construction = [
-      "https://cdn.jsdelivr.net/gh/daveee00/export_blender/clubDerVisionere.glb",
-      "https://cdn.jsdelivr.net/gh/daveee00/export_blender/goa.glb",
-      "https://cdn.jsdelivr.net/gh/daveee00/export_blender/teller.glb",
-      "https://cdn.jsdelivr.net/gh/daveee00/export_blender/theLotRadio.glb",
-      "https://cdn.jsdelivr.net/gh/daveee00/export_blender/haudio.glb",
+      "https://rcrdme-gnmr.netlify.app/blender-exp/clubdervisionere.glb",
+      "https://rcrdme-gnmr.netlify.app/blender-exp/goa.glb",
+      "https://rcrdme-gnmr.netlify.app/blender-exp/teller.glb",
+      "https://rcrdme-gnmr.netlify.app/blender-exp/theLotRadio.glb",
+      "https://rcrdme-gnmr.netlify.app/blender-exp/haudio.glb",
+      "https://rcrdme-gnmr.netlify.app/blender-exp/lesenfants.glb",
     ];
 
 
