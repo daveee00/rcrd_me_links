@@ -1,0 +1,125 @@
+footer {
+    height: fit-content;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 8% 80px;
+    justify-content: bottom;
+    align-items: center;
+    position: relative;
+    background: black;
+  }
+  
+  #previous,
+  #next {
+    z-index: 5;
+  }
+  
+  #previous:hover,
+  #next:hover {
+    cursor: pointer;
+  }
+
+  .navigation-perfromance {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    justify-content: space-between;
+  }
+  
+  .video_background {
+    position: absolute;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    overflow: hidden;
+  }
+  
+  .video_background video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0.3;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .navigation-text-wrapper {
+    height: 64px;
+    color: white;
+    opacity: .5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .navigation-text {
+    color: white;
+    font-size: 1em;
+    text-transform: uppercase;
+    text-align: center;
+    height: fit-content;
+  }
+  
+  
+  #back-to-top {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    background: none;
+    border: none;
+    position: absolute;
+    transform: rotate(90deg);
+    right: 16px;
+    bottom: 20%;
+    padding: 0;
+    cursor: pointer;
+  }
+  
+  .footer-back-to-top {
+    display: none;
+    position: fixed;
+    right: 64px !important;
+    bottom: 8%;
+    background: none;
+    color: #ff0000;
+    border: none;
+    border-radius: 0;
+    width: auto;
+    height: auto;
+    font-size: 0.85rem;
+    cursor: pointer;
+    box-shadow: none;
+    transition: color 0.2s, opacity 0.3s;
+    opacity: 0.5;
+    z-index: 1000;
+    padding: 0;
+  }
+  .footer-back-to-top.visible {
+    display: block;
+    opacity: 0.5;
+    animation: fadeInUp 0.5s;
+  }
+  .footer-back-to-top:hover {
+    color: #ff0000;
+    opacity: 1;
+  }
+  .vertical-text {
+    display: inline-block;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    letter-spacing: 0.2em;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    user-select: none;
+  }
+  
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }

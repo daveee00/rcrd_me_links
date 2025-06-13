@@ -1,0 +1,37 @@
+#page-top {
+    width: 100%;
+    height: 10vh;
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.header-4 {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around !important;
+    align-items: center;
+    position: relative;
+    margin-bottom: 8%;
+}
+
+.header-4 .performance-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: top;
+    z-index: 1
+}
+
+.header-4 .performance-title img {
+    width: 50%;
+    margin-top: 8%;
+
+}
+
+.header-4 .date-container .performance-date {
+    font-size: 30px;
+}
