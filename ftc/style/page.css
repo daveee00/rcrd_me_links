@@ -47,7 +47,6 @@ body {
 /* ===== for the cause ===== */
 * {
   font-family: "ibm-plex-mono", sans-serif;
-  color: #fbfb6e;
   box-sizing: border-box;
 }
 
@@ -221,6 +220,7 @@ main {
   font-size: 3rem;
   font-weight: 700;
   font-style: normal;
+    color: #fbfb6e;
 }
 
 /*–––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
