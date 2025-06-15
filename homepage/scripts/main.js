@@ -81,17 +81,17 @@
     // PAGE LINKS
     const pageLinks = [
       "/performances/club-der-visionaire",
-      "/performances/elsewhere",
-      "/pages/vena/vena.html",
-      "/pages/for-the-cause/for-the-cause.html",
+      "wddc-slipknot.webflow.io/performances/elsewhere-seoul",
+      "wddc-slipknot.webflow.io/performances/endovena-festival",
+      "wddc-slipknot.webflow.io/performances/for-the-cause",
       "/performances/goa-last-dance",
       "/performances/haudio",
-      "/performances/hor",
+      "wddc-slipknot.webflow.io/performances/hor",
       "/performances/les-elephants",
       "/performances/lot-radio",
-      "/pages/radio-pirate/radio-pirate.html",
+      "wddc-slipknot.webflow.io/performances/radio-pirate",
       "/performances/teller",
-      "/performances/tekno-birrette",
+      "wddc-slipknot.webflow.io/performances/tekno-birrette",
     ];
 
     //page performance css
