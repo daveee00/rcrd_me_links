@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let clock = new THREE.Clock();
   // Set up renderer
   const width = container.clientWidth;
-  const height = container.clientHeight; // fallback height
+  const height = container.clientHeight || 400; // fallback height
   camera = new THREE.PerspectiveCamera(25, width / height, 0.25, 200);
   camera.position.set(-63, 0, 20);
   camera.lookAt(0, 0, 0);
