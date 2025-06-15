@@ -625,6 +625,7 @@ footer {
     min-height: 100vh;
     height: 200vh;
     overflow: hidden;
+      margin-bottom: 32px !important;
   }
   
   .second-section img {
