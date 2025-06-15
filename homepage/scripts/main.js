@@ -321,7 +321,7 @@
       pageActive.style.top = "0";
       pageActive.style.left = "0";
       pageActive.style.width = "100vw";
-      pageActive.style.height = window.innerWidth <= 428 ? "90vh" : "100vh";
+      pageActive.style.height = window.innerWidth <= 428 ? "96vh" : "100vh";
       pageActive.style.zIndex = "11";
       pageActive.style.background = "none";
       pageActive.style.pointerEvents = 'none';
@@ -623,7 +623,7 @@
       modelSelected.style.top = "0";
       modelSelected.style.left = "0";
       modelSelected.style.width = "100%";
-      modelSelected.style.height = window.innerWidth <= 428 ? "90vh" : "100vh";
+      modelSelected.style.height = window.innerWidth <= 428 ? "96vh" : "100vh";
       modelSelected.style.zIndex = "5";
       modelSelected.style.overflow = "hidden";
       modelSelected.style.pointerEvents = "none";
@@ -787,7 +787,7 @@
         const modelBackground = document.createElement('div');
         modelBackground.id = 'model-background';
         modelBackground.style.width = '100%';
-        modelBackground.style.height = window.innerWidth <= 428 ? "90vh" : '100vh';
+        modelBackground.style.height = window.innerWidth <= 428 ? "96vh" : '100vh';
         modelBackground.style.position = 'fixed';
         modelBackground.style.top = '0';
         modelBackground.style.left = '0';
