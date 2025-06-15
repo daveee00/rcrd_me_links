@@ -73,6 +73,7 @@
 
 .side-name {
   opacity: calc(50%);
+  margin-bottom: 8px;
 }
 
 .tracklist-section .tracklist-infos .side .track-name {
