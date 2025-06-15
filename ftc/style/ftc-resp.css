@@ -1,0 +1,845 @@
+.header-rp img {
+    width: 50% !important;
+    mix-blend-mode: overlay;
+}
+
+.date {
+    font-size: 30px;
+}
+
+@media screen and (max-width: 768px) {
+
+    /*===================footer.css========================*/
+footer {
+    height: fit-content;
+    width: 100%;
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    padding: 8% 40px !important;
+    justify-content: bottom;
+    align-items: center;
+    position: relative;
+  }
+    .navigation-performance {
+    height: 50% !important;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    justify-content: space-between;
+    margin-bottom: 80px;
+  }
+
+  #previous,
+  #next {
+    z-index: 5;
+  }
+  
+  #previous:hover,
+  #next:hover {
+    cursor: pointer;
+  }
+  
+  .navigation-text-wrapper {
+    height: fit-content !important;
+    color: white;
+    opacity: .5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .navigation-text {
+    color: white;
+    font-size: 1em;
+    text-transform: uppercase;
+    text-align: center;
+    height: fit-content;
+  }
+  
+  
+  #back-to-top {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    background: none;
+    border: none;
+    position: absolute;
+    transform: rotate(90deg);
+    bottom: 20%;
+    padding: 0;
+    cursor: pointer;
+  }
+
+  .footer-back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 8%;
+    right: 16px !important;
+    background: none;
+    color: #fff !important;
+    border: none;
+    border-radius: 0;
+    width: auto;
+    height: auto;
+    font-size: 0.85rem;
+    cursor: pointer;
+    box-shadow: none;
+    transition: color 0.2s, opacity 0.3s;
+    opacity: 0.5;
+    z-index: 1000;
+    padding: 0;
+  }
+  .footer-back-to-top.visible {
+    display: block;
+    opacity: 0.5;
+    animation: fadeInUp 0.5s;
+  }
+  .footer-back-to-top:hover {
+    color: #ffffff;
+    opacity: 1;
+  }
+  .vertical-text {
+    display: inline-block;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    letter-spacing: 0.2em;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    user-select: none;
+  }
+  
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /*===================ui-elements.css========================*/
+
+.ui-elements {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    z-index: 6;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    pointer-events: none;
+    justify-content: space-between;
+  }
+  
+  .ui-elements > * {
+    pointer-events: auto;
+  }
+  
+  .buttons-container {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    gap: 32px;
+    z-index: 20;
+    bottom: 10%;
+    left: 16px !important;
+  }
+  
+  .buttons-container a img {
+    width: 20px;
+    opacity: calc(50%);
+    transition: 300ms;
+    pointer-events: auto;
+  }
+  
+  .buttons-container a img:hover {
+    opacity: calc(100%);
+    transform: scale(1.5);
+  }
+  
+  /* Scroll Indicator */
+  .scroll-indicator {
+    z-index: 1000;
+    opacity: 0.7;
+    pointer-events: none;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 16px !important;
+    height: fit-content;
+    display: flex;
+    position: fixed;
+    top: 73% !important;
+    right: 0;
+  
+  }
+  
+  .scroll-text {
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    transform-origin: 100%;
+    white-space: nowrap;
+    font-size: 0.8rem;
+    font-family: "ibm-plex-mono", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    position: absolute;
+    top: 78%;
+    right: 16px !important;
+    transform: rotate(90deg);
+    mix-blend-mode: overlay;
+  }
+  
+  .scroll-text-footer {
+    color: rgba(255, 255, 255, 1);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    transform-origin: 100%;
+    white-space: nowrap;
+    font-size: 0.8rem;
+    position: absolute;
+    top: 90%;
+    right: 16px !important;
+    z-index: 10;
+    transform: rotate(90deg);
+  }
+  
+  .scroll-line {
+    background-color: #ffffff;
+    width: 2px;
+    height: 100px;
+    margin-top: 2rem;
+    position: absolute;
+    top: 78%;
+    right: 16px !important;
+    overflow: hidden;
+  }
+  
+  .scroll-line::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #484053;
+    animation: scrollLine 1.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  }
+  @keyframes scrollLine {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+  }
+  /* Fade out when scrolled */
+  .scroll-indicator.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  } 
+  .fade-out {
+    opacity: 0;
+    transition: opacity 0.4s;
+    pointer-events: none;
+  }
+  
+  /*––––––––––––––––––––––––––––––––––––––––––––––––*/
+  
+  .home-button {
+    position: fixed;
+    top: 8%;
+    left: 16px !important;
+    opacity: 0.5;
+    transition: 300ms;
+    pointer-events: auto;
+  }
+  
+  .home-button:hover {
+    opacity: 1;
+    cursor: pointer;
+  }
+  
+  .home-button svg path {
+    stroke: white !important;
+  }
+
+
+/*=============================tracklist.css=====================================*/
+.tracklist-section {
+    width: 100vw;
+    height: 70vh !important;
+    margin-bottom: 40px !important;
+    padding: 20px 0 20px 0 !important;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.8) 0%,
+      rgba(0, 0, 0, 0) 100%
+    );
+  }
+  .tracklist-wrapper {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    width: calc(100% - 128px) !important;
+    max-width: 100vw !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    gap: 0 !important;
+  }
+  #vinile {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin: 24px auto 12px auto !important;
+    height: 160px !important;
+    aspect-ratio: 1/1;
+    max-width: 70vw !important;
+    border-radius: 50% !important;
+  
+
+    position: static !important;
+    left: unset !important;
+    right: unset !important;
+  }
+  #vinile img {
+    display: block !important; 
+    margin: 0 auto !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    border-radius: 50% !important;
+  }
+
+
+  #track-infos {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: unset !important;
+    grid-template-rows: repeat(3, minmax(0, 1fr)) !important;
+    gap: 2px !important;
+  }
+  #tracklist-title {
+    font-size: 1.5rem !important;
+    font-weight: 800;
+    line-height: 1;
+    padding-left: 0px !important;
+    width: 100%;
+    text-align: left;
+    height: fit-content;
+  }
+  #tracklist-artist {
+    font-size: 0.9rem !important;
+    margin-bottom: 44px !important;
+    padding-left: 0px !important;
+    margin-top: 4px;
+  }
+  .side {
+    font-size: 1rem ;
+    padding-left: 0px;
+    margin-top: 16px;
+    width: calc(100%) !important;
+  }
+  .side-name {
+    font-size: 0.9rem;
+  }
+  .track-name {
+    font-size: 0.95rem;
+  }
+
+  
+  /*========================================*/
+  
+  .scroll-text-section {
+      background: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0) 0%,
+          rgba(0, 0, 0, 0.8) 100%
+        );
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    padding: 64px 0px 0px 0px;
+  }
+  
+  .scroll-wrapper {
+    display: inline-flex;
+    animation: scroll 40s linear infinite;
+    white-space: nowrap;
+    mix-blend-mode: normal !important;
+    margin-bottom: 64px;
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  .scroll-text-section .text {
+    display: inline-block;
+    padding-right: 40px;
+    font-family: "VCR OSD Mono";
+    font-size: 3rem !important;
+    font-weight: bold;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  
+  
+/*=============================header.css=====================================*/
+.shade {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    background: rgba(0, 0, 0, 0.1);
+  }
+  .header-rp {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow-x: hidden;
+  }
+  
+
+  .date {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 1rem !important;
+    position: absolute;
+    bottom: 10vh;
+    margin: 0;
+  }
+  
+  .radio-title {
+    font-family: 'VCR OSD Mono', monospace;
+    font-size: 200px;
+    color: white;
+    letter-spacing: 2px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .radio-title .tight {
+    letter-spacing: -0.02em;
+  }
+
+/*=======================style.css=========================*/
+
+* {
+    font-family: "ibm-plex-mono", sans-serif;
+    color: #fbfb6e;
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  .page-wrapper {
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    min-height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  
+  .page-background {
+    background: url(https://cdn.jsdelivr.net/gh/daveee00/scripts-for-the-cause-test/assets/sfondo-texture-ftc-smallest.png);
+    background-size: cover;
+  }
+  
+  .shade {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    background: rgba(0, 0, 0, 0.1);
+  }
+  
+  /*––––––––––––––––––––––––––––––––-*/
+  
+  main {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  
+  .first-section {
+    margin-top: 80px !important;
+    width: 100vw;
+    height: 70vh !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  /* Center the main-media-wrapper and give it a pink background */
+  .first-section .main-media-wrapper {
+    position: relative;
+    width: 80vw;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    animation: videoPulse 2s ease-in-out infinite;
+  }
+  
+  @keyframes videoPulse {
+    0% {
+      transform: scale(1);
+    }
+    25% {
+      transform: scale(1.02);
+    }
+    50% {
+      transform: scale(1);
+    }
+    75% {
+      transform: scale(1.02);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .first-section .main-media-wrapper video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0px !important;
+  }
+  
+  /*––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
+  
+  .second-text {
+    height: fit-content;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+    margin-bottom: 200px;
+    opacity: 0;
+  }
+  
+  .second-text.animate {
+    animation: fadeIn 1s ease-out forwards;
+  }
+  
+  .second-text::before {
+    content: "";
+    width: 400px;
+    height: 2px;
+    background: #fbfb6e;
+    margin-bottom: 40px;
+    transform: scaleX(0);
+    transform-origin: center;
+  }
+  
+  .second-text.animate::before {
+    animation: lineGrow 2s ease-out forwards, lineStretch 3s ease-in-out infinite;
+    animation-delay: 0.8s, 2.8s;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes lineGrow {
+    from {
+      transform: scaleX(0);
+    }
+    to {
+      transform: scaleX(1);
+    }
+  }
+  
+  @keyframes lineStretch {
+    0% {
+      width: 400px;
+    }
+    50% {
+      width: 600px;
+    }
+    100% {
+      width: 400px;
+    }
+  }
+  
+  .second-text .second-text-content {
+    width: 80% !important;
+    text-align: center;
+    font-size: 1.5rem !important;
+    line-height: 1.2 !important;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  /*–––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
+  
+  .second-section {
+    width: 100%;
+    position: relative;
+    z-index: 15;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    height: 200vh;
+    overflow: hidden;
+  }
+  
+  .second-section img {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    opacity: 1;
+    pointer-events: none;
+    will-change: opacity;
+  }
+  
+  .text-second-section {
+    position: relative;
+    z-index: 2;
+    margin-top: 100vh;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    color: #fbfb6e;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 1.5rem !important;
+    line-height: 1.2 !important;
+    text-align: left;
+    font-weight: 500;
+    width: 70vw;
+  }
+  
+  .text-second-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /*–––––––––––––*/
+  
+  .grid-section {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+    grid-template-rows: repeat(1, minmax(0, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+    align-items: center;
+    padding: 16% 64px 8% 64px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .grid-section.animate {
+    animation: fadeInGrid 1s ease-out forwards;
+  }
+  
+  .grid-section.exit {
+    animation: fadeOutGrid 0.5s ease-in forwards;
+  }
+  
+  .grid-section > * {
+    aspect-ratio: 1/1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .grid-section > *::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(251, 251, 110, 0.1);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .grid-section > *:hover {
+    transform: scale(1.05);
+    z-index: 2;
+  }
+  
+  .grid-section > *:hover::after {
+    opacity: 1;
+  }
+  
+  .grid-section > *:nth-child(1) {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  
+  .grid-section > *:nth-child(2) {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  
+  .grid-section > *:nth-child(3) {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  
+  .grid-section.animate > *:nth-child(1) {
+    animation: slideInLeft 1s ease-out forwards;
+    animation-delay: 0.3s;
+  }
+  
+  .grid-section.animate > *:nth-child(2) {
+    animation: slideInUp 1s ease-out forwards;
+    animation-delay: 0.5s;
+  }
+  
+  .grid-section.animate > *:nth-child(3) {
+    animation: slideInRight 1s ease-out forwards;
+    animation-delay: 0.7s;
+  }
+  
+  .grid-section.exit > *:nth-child(1) {
+    animation: slideOutLeft 0.5s ease-in forwards;
+  }
+  
+  .grid-section.exit > *:nth-child(2) {
+    animation: slideOutDown 0.5s ease-in forwards;
+  }
+  
+  .grid-section.exit > *:nth-child(3) {
+    animation: slideOutRight 0.5s ease-in forwards;
+  }
+  
+  @keyframes fadeInGrid {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeOutGrid {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes slideInLeft {
+    from {
+      transform: translateX(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInUp {
+    from {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInRight {
+    from {
+      transform: translateX(50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideOutLeft {
+    from {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    to {
+      transform: translateX(-50px);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes slideOutDown {
+    from {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    to {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes slideOutRight {
+    from {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    to {
+      transform: translateX(50px);
+      opacity: 0;
+    }
+  }
+  
+
+
+}
