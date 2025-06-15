@@ -391,7 +391,7 @@ footer {
   .scroll-text-section .text {
     display: inline-block;
     padding-right: 40px;
-    font-family: "ibm plex mono";
+    font-family: "ibm plex mono", sans-serif;
     font-size: 3rem !important;
     font-weight: bold;
     white-space: nowrap;
