@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   let camera, scene, renderer, model;
-  let container = document.getElementById("previous");
+  let container = document.getElementById("next");
 
   if (!container) {
     console.error("Container element not found");
@@ -21,7 +21,9 @@ document.addEventListener("DOMContentLoaded", function () {
   let clock = new THREE.Clock();
   // Set up renderer
   const width = container.clientWidth;
-  const height = container.clientHeight || 400; // fallback height
+  // Check for mobile devices and set appropriate height
+  const isMobile = window.matchMedia("(max-width: 428px)").matches;
+  const height = isMobile ? (container.clientHeight || 200) : (container.clientHeight || 400); // Use clientHeight with fallback to 200px for mobile
   camera = new THREE.PerspectiveCamera(25, width / height, 0.25, 200);
   camera.position.set(-63, 0, 20);
   camera.lookAt(0, 0, 0);
@@ -34,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Model loader
   const loader = new THREE.GLTFLoader();
   loader.load(
-    "https://rcrdme-gnmr.netlify.app/blender-exp/teknoBirrette.glb",
+    "https://rcrdme-gnmr.netlify.app/blender-exp/teknobirrette.glb",
     function (gltf) {
       model = gltf.scene;
       model.scale.set(10, 10, 10);
@@ -56,7 +58,8 @@ document.addEventListener("DOMContentLoaded", function () {
   // Responsive
   window.addEventListener("resize", function () {
     const w = container.clientWidth;
-    const h = container.clientHeight || 400;
+    const isMobile = window.matchMedia("(max-width: 428px)").matches;
+    const h = isMobile ? (container.clientHeight || 200) : (container.clientHeight || 400); // Use clientHeight with fallback to 200px for mobile
     camera.aspect = w / h;
     camera.updateProjectionMatrix();
     renderer.setSize(w, h);
