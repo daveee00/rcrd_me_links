@@ -86,7 +86,7 @@ footer {
   right: 64px;
   bottom: 8%;
   background: none;
-  color: #fff;
+  color: #ffffff;
   border: none;
   border-radius: 0;
   width: auto;
@@ -118,6 +118,7 @@ footer {
   font-size: 0.85rem;
   text-transform: uppercase;
   user-select: none;
+  color: #fffff;
 }
 
 @keyframes fadeInUp {
