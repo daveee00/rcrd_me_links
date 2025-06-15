@@ -222,6 +222,7 @@ main {
   font-weight: 700;
   font-style: normal;
     color: #fbfb6e;
+  line-height: 1.2;
 }
 
 /*–––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
@@ -265,6 +266,7 @@ main {
   text-align: left;
   font-weight: 500;
   width: 70vw;
+  line-height: 1.2;
 }
 
 .text-second-section.visible {
