@@ -1,11 +1,11 @@
 @font-face {
-  font-family: 'Rajdhani';
-  src: url('https://rcrdme-gnmr.netlify.app/homepage/Rajdhani-SemiBold.ttf') format(truetype);
+  font-family: "Rajdhani";
+  src: url("https://rcrdme-gnmr.netlify.app/homepage/Rajdhani-SemiBold.ttf")
+    format(truetype);
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
-
 
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /**
@@ -13,7 +13,7 @@
  * 2. Prevent iOS and IE text size adjust after device orientation change,
  *    without disabling user zoom.
  */
- html {
+html {
   font-family: sans-serif;
   /* 1 */
   -ms-text-size-adjust: 100%;
@@ -284,8 +284,8 @@ input {
  * 1. Address box sizing set to `content-box` in IE 8/9/10.
  * 2. Remove excess padding in IE 8/9/10.
  */
-input[type='checkbox'],
-input[type='radio'] {
+input[type="checkbox"],
+input[type="radio"] {
   box-sizing: border-box;
   /* 1 */
   padding: 0;
@@ -296,8 +296,8 @@ input[type='radio'] {
  * `font-size` values of the `input`, it causes the cursor style of the
  * decrement button to change from `default` to `text`.
  */
-input[type='number']::-webkit-inner-spin-button,
-input[type='number']::-webkit-outer-spin-button {
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
 /**
@@ -305,7 +305,7 @@ input[type='number']::-webkit-outer-spin-button {
  * 2. CUSTOM FOR WEBFLOW: box-sizing: content-box rule removed
  *    (similar to normalize.css >=4.0.0)
  */
-input[type='search'] {
+input[type="search"] {
   -webkit-appearance: none;
   /* 1 */
 }
@@ -314,8 +314,8 @@ input[type='search'] {
  * Safari (but not Chrome) clips the cancel button when the search input has
  * padding (and `textfield` appearance).
  */
-input[type='search']::-webkit-search-cancel-button,
-input[type='search']::-webkit-search-decoration {
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 /**
@@ -363,17 +363,17 @@ th {
   padding: 0;
 }
 
-
 @font-face {
-  font-family: 'webflow-icons';
-  src: url("data:application/x-font-ttf;charset=utf-8;base64,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") format('truetype');
+  font-family: "webflow-icons";
+  src: url("data:application/x-font-ttf;charset=utf-8;base64,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")
+    format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 [class^="w-icon-"],
 [class*=" w-icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'webflow-icons' !important;
+  font-family: "webflow-icons" !important;
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -453,7 +453,7 @@ html.w-mod-touch * {
 .w-button {
   display: inline-block;
   padding: 9px 15px;
-  background-color: #3898EC;
+  background-color: #3898ec;
   color: white;
   border: 0;
   line-height: inherit;
@@ -604,7 +604,7 @@ p {
 blockquote {
   margin: 0 0 10px 0;
   padding: 10px 20px;
-  border-left: 5px solid #E2E2E2;
+  border-left: 5px solid #e2e2e2;
   font-size: 18px;
   line-height: 22px;
 }
@@ -659,8 +659,8 @@ fieldset {
   border: 0;
 }
 button,
-[type='button'],
-[type='reset'] {
+[type="button"],
+[type="reset"] {
   border: 0;
   cursor: pointer;
   -webkit-appearance: button;
@@ -705,7 +705,7 @@ label {
 }
 .w-input:focus,
 .w-select:focus {
-  border-color: #3898EC;
+  border-color: #3898ec;
   outline: 0;
 }
 .w-input[disabled],
@@ -1183,7 +1183,7 @@ textarea.w-select {
   top: 50%;
   left: 0;
   border: solid transparent;
-  content: ' ';
+  content: " ";
   height: 0;
   width: 0;
   position: absolute;
@@ -1223,7 +1223,7 @@ textarea.w-select {
   top: 100%;
   left: 50%;
   border: solid transparent;
-  content: ' ';
+  content: " ";
   height: 0;
   width: 0;
   position: absolute;
@@ -1383,10 +1383,10 @@ textarea.w-select {
   tap-highlight-color: rgba(0, 0, 0, 0);
   user-select: none;
 }
-.w-slider-arrow-left [class^='w-icon-'],
-.w-slider-arrow-right [class^='w-icon-'],
-.w-slider-arrow-left [class*=' w-icon-'],
-.w-slider-arrow-right [class*=' w-icon-'] {
+.w-slider-arrow-left [class^="w-icon-"],
+.w-slider-arrow-right [class^="w-icon-"],
+.w-slider-arrow-left [class*=" w-icon-"],
+.w-slider-arrow-right [class*=" w-icon-"] {
   position: absolute;
 }
 .w-slider-arrow-left:focus,
@@ -1493,7 +1493,7 @@ textarea.w-select {
  * ## Note
  * Safari (on both iOS and OS X) does not handle viewport units (vh, vw) well.
  * For example percentage units do not work on descendants of elements that
- * have any dimensions expressed in viewport units. It also doesn’t handle them at
+ * have any dimensions expressed in viewport units. It also doesn't handle them at
  * all in `calc()`.
  */
 /**
@@ -1522,7 +1522,8 @@ textarea.w-select {
   bottom: 0;
   left: 0;
   color: #fff;
-  font-family: "Helvetica Neue", Helvetica, Ubuntu, "Segoe UI", Verdana, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Ubuntu, "Segoe UI", Verdana,
+    sans-serif;
   font-size: 17px;
   line-height: 1.2;
   font-weight: 300;
@@ -1682,7 +1683,7 @@ textarea.w-select {
 }
 /*
  * 1. We use content-box to avoid having to do `width: calc(10vh + 2vw)`
- *    which doesn’t work in Safari anyway.
+ *    which doesn't work in Safari anyway.
  * 2. Chrome renders images pixelated when switching to GPU. Making sure
  *    the parent is also rendered on the GPU (by setting translate3d for
  *    example) fixes this behavior.
@@ -1832,7 +1833,7 @@ textarea.w-select {
 }
 .w-richtext figure.w-richtext-figure-type-video > div:after,
 .w-richtext figure[data-rt-type="video"] > div:after {
-  content: '';
+  content: "";
   position: absolute;
   display: none;
   left: 0;
@@ -1845,7 +1846,7 @@ textarea.w-select {
   max-width: 60%;
 }
 .w-richtext figure > div:before {
-  cursor: default!important;
+  cursor: default !important;
 }
 .w-richtext figure img {
   width: 100%;
@@ -1976,7 +1977,7 @@ textarea.w-select {
   top: 100%;
   left: 0;
   right: 0;
-  background: #C8C8C8;
+  background: #c8c8c8;
   text-align: center;
   overflow: visible;
   min-width: 200px;
@@ -1997,20 +1998,20 @@ textarea.w-select {
 .w-nav-overlay [data-nav-menu-open] {
   top: 0;
 }
-.w-nav[data-animation='over-left'] .w-nav-overlay {
+.w-nav[data-animation="over-left"] .w-nav-overlay {
   width: auto;
 }
-.w-nav[data-animation='over-left'] .w-nav-overlay,
-.w-nav[data-animation='over-left'] [data-nav-menu-open] {
+.w-nav[data-animation="over-left"] .w-nav-overlay,
+.w-nav[data-animation="over-left"] [data-nav-menu-open] {
   right: auto;
   z-index: 1;
   top: 0;
 }
-.w-nav[data-animation='over-right'] .w-nav-overlay {
+.w-nav[data-animation="over-right"] .w-nav-overlay {
   width: auto;
 }
-.w-nav[data-animation='over-right'] .w-nav-overlay,
-.w-nav[data-animation='over-right'] [data-nav-menu-open] {
+.w-nav[data-animation="over-right"] .w-nav-overlay,
+.w-nav[data-animation="over-right"] [data-nav-menu-open] {
   left: auto;
   z-index: 1;
   top: 0;
@@ -2030,13 +2031,13 @@ textarea.w-select {
   outline: 0;
 }
 .w-nav-button.w--open {
-  background-color: #C8C8C8;
+  background-color: #c8c8c8;
   color: white;
 }
-.w-nav[data-collapse='all'] .w-nav-menu {
+.w-nav[data-collapse="all"] .w-nav-menu {
   display: none;
 }
-.w-nav[data-collapse='all'] .w-nav-button {
+.w-nav[data-collapse="all"] .w-nav-button {
   display: block;
 }
 .w--nav-dropdown-open {
@@ -2049,18 +2050,18 @@ textarea.w-select {
   position: static;
 }
 @media screen and (max-width: 991px) {
-  .w-nav[data-collapse='medium'] .w-nav-menu {
+  .w-nav[data-collapse="medium"] .w-nav-menu {
     display: none;
   }
-  .w-nav[data-collapse='medium'] .w-nav-button {
+  .w-nav[data-collapse="medium"] .w-nav-button {
     display: block;
   }
 }
 @media screen and (max-width: 767px) {
-  .w-nav[data-collapse='small'] .w-nav-menu {
+  .w-nav[data-collapse="small"] .w-nav-menu {
     display: none;
   }
-  .w-nav[data-collapse='small'] .w-nav-button {
+  .w-nav[data-collapse="small"] .w-nav-button {
     display: block;
   }
   .w-nav-brand {
@@ -2068,10 +2069,10 @@ textarea.w-select {
   }
 }
 @media screen and (max-width: 479px) {
-  .w-nav[data-collapse='tiny'] .w-nav-menu {
+  .w-nav[data-collapse="tiny"] .w-nav-menu {
     display: none;
   }
-  .w-nav[data-collapse='tiny'] .w-nav-button {
+  .w-nav[data-collapse="tiny"] .w-nav-button {
     display: block;
   }
 }
@@ -2105,7 +2106,7 @@ textarea.w-select {
   background-color: #dddddd;
 }
 .w-tab-link.w--current {
-  background-color: #C8C8C8;
+  background-color: #c8c8c8;
 }
 .w-tab-link:focus {
   outline: 0;
@@ -2155,10 +2156,9 @@ textarea.w-select {
   display: grid;
 }
 
-
 @font-face {
   font-family: Aktura;
-  src: url('../fonts/Aktura-Regular.woff') format("woff");
+  src: url("../fonts/Aktura-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -2166,7 +2166,7 @@ textarea.w-select {
 
 @font-face {
   font-family: IBMPlexMono;
-  src: url('../fonts/IBMPlexMono-Regular.ttf') format("truetype");
+  src: url("../fonts/IBMPlexMono-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -2174,7 +2174,7 @@ textarea.w-select {
 
 @font-face {
   font-family: IBMPlexMono;
-  src: url('../fonts/IBMPlexMono-Medium.ttf') format("truetype");
+  src: url("../fonts/IBMPlexMono-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -2182,7 +2182,7 @@ textarea.w-select {
 
 @font-face {
   font-family: IBMPlexMono;
-  src: url('../fonts/IBMPlexMono-Bold.ttf') format("truetype");
+  src: url("../fonts/IBMPlexMono-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -2250,10 +2250,19 @@ body {
 .video_background {
   z-index: -10;
   opacity: 1;
-  mix-blend-mode: hard-light;
   position: fixed;
   inset: 0% 0% auto;
   overflow: hidden;
+}
+
+.video_background video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .first {
@@ -2300,7 +2309,7 @@ body {
 }
 
 .tracklist {
-  background-image: url('../images/the-lot-radio_scrolling_true-title.png');
+  background-image: url("../images/the-lot-radio_scrolling_true-title.png");
   background-position: 50% 0;
   background-size: cover;
   height: 100vh;
@@ -2308,7 +2317,7 @@ body {
 
 .social-buttons-container {
   z-index: 1000;
-  opacity: .4;
+  opacity: 0.4;
   flex-direction: column;
   gap: 30px;
   display: flex;
@@ -2324,7 +2333,7 @@ body {
 
 .scroll-indicator {
   z-index: 1000;
-  opacity: .4;
+  opacity: 0.4;
   pointer-events: none;
   justify-content: flex-end;
   align-items: center;
@@ -2344,7 +2353,7 @@ body {
   letter-spacing: 3px;
   transform-origin: 100%;
   white-space: nowrap;
-  font-size: .8rem;
+  font-size: 0.8rem;
   position: absolute;
   top: 70%;
   right: 32px;
@@ -2357,7 +2366,7 @@ body {
   letter-spacing: 3px;
   transform-origin: 100%;
   white-space: nowrap;
-  font-size: .8rem;
+  font-size: 0.8rem;
   position: absolute;
   top: 90%;
   right: 32px;
@@ -2403,30 +2412,31 @@ body {
 .text-block-3 {
   color: var(--_colors---basic--white);
   text-align: center;
-  opacity: .4;
+  opacity: 0.4;
   padding-top: 36px;
 }
 
 .cover_the-lot-radio {
   grid-column-gap: 1px;
   grid-row-gap: 0px;
-  background-image: url('../images/the-lot-radio_scrolling_cover.png');
+  background-image: url("../images/the-lot-radio_scrolling_cover.png");
   background-position: 50%;
   background-size: cover;
   flex-flow: column;
-  grid-template: ". . . . VINYL VINYL VINYL VINYL VINYL VINYL . ."
-                 ". . . . VINYL VINYL VINYL VINYL VINYL VINYL . ."
-                 ". . . . VINYL VINYL VINYL VINYL VINYL VINYL . ."
-                 ". . . . VINYL VINYL VINYL VINYL VINYL VINYL . ."
-                 ". . . . VINYL VINYL VINYL VINYL VINYL VINYL . ."
-                 ". . . . VINYL VINYL VINYL VINYL VINYL VINYL . ."
-                 ". . . . VINYL VINYL VINYL VINYL VINYL VINYL . ."
-                 ". . . . VINYL VINYL VINYL VINYL VINYL VINYL . ."
-                 ". . . . VINYL VINYL VINYL VINYL VINYL VINYL . ."
-                 ". . . . VINYL VINYL VINYL VINYL VINYL VINYL . ."
-                 ". TITLE-horizontal TITLE-horizontal TITLE-horizontal VINYL VINYL VINYL VINYL VINYL VINYL . ."
-                 "ARROWS ARROWS ARROWS ARROWS ARROWS ARROWS ARROWS ARROWS ARROWS ARROWS ARROWS ARROWS"
-                 / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template:
+    ". . . . VINYL VINYL VINYL VINYL VINYL VINYL . ."
+    ". . . . VINYL VINYL VINYL VINYL VINYL VINYL . ."
+    ". . . . VINYL VINYL VINYL VINYL VINYL VINYL . ."
+    ". . . . VINYL VINYL VINYL VINYL VINYL VINYL . ."
+    ". . . . VINYL VINYL VINYL VINYL VINYL VINYL . ."
+    ". . . . VINYL VINYL VINYL VINYL VINYL VINYL . ."
+    ". . . . VINYL VINYL VINYL VINYL VINYL VINYL . ."
+    ". . . . VINYL VINYL VINYL VINYL VINYL VINYL . ."
+    ". . . . VINYL VINYL VINYL VINYL VINYL VINYL . ."
+    ". . . . VINYL VINYL VINYL VINYL VINYL VINYL . ."
+    ". TITLE-horizontal TITLE-horizontal TITLE-horizontal VINYL VINYL VINYL VINYL VINYL VINYL . ."
+    "ARROWS ARROWS ARROWS ARROWS ARROWS ARROWS ARROWS ARROWS ARROWS ARROWS ARROWS ARROWS"
+    / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-auto-columns: 1fr;
   grid-auto-flow: column;
   justify-content: start;
@@ -2438,7 +2448,7 @@ body {
 
 .title_the-lot-radio {
   color: var(--_colors---basic--white);
-  background-image: url('../images/the-lot-radio_scrolling_true-title.png');
+  background-image: url("../images/the-lot-radio_scrolling_true-title.png");
   background-position: 50% 0;
   background-size: cover;
   justify-content: center;
@@ -2448,7 +2458,7 @@ body {
 }
 
 .scrolling_01_the-lot-radio {
-  background-image: url('../images/the-lot-radio_scrolling_01.png');
+  background-image: url("../images/the-lot-radio_scrolling_01.png");
   background-position: 50% 0;
   background-repeat: repeat;
   background-size: cover;
@@ -2459,7 +2469,7 @@ body {
 }
 
 .scrolling_02_the-lot-radio {
-  background-image: url('../images/the-lot-radio_scrolling_02.png');
+  background-image: url("../images/the-lot-radio_scrolling_02.png");
   background-position: 50% 0;
   background-repeat: repeat;
   background-size: cover;
@@ -2468,7 +2478,7 @@ body {
 }
 
 .scrolling_04_the-lot-radio {
-  background-image: url('../images/the-lot-radio_scrolling_04.png');
+  background-image: url("../images/the-lot-radio_scrolling_04.png");
   background-position: 50% 0;
   background-repeat: repeat;
   background-size: cover;
@@ -2477,7 +2487,7 @@ body {
 
 .scrolling_03_the-lot-radio {
   -webkit-text-fill-color: inherit;
-  background-image: url('../images/the-lot-radio_scrolling_03.png');
+  background-image: url("../images/the-lot-radio_scrolling_03.png");
   background-position: 50% 0;
   background-size: cover;
   background-clip: border-box;
@@ -2485,7 +2495,7 @@ body {
 }
 
 .scroll {
-  background-image: url('../images/scroll.webp');
+  background-image: url("../images/scroll.webp");
   background-position: 50% 0;
   background-size: cover;
   height: 100ch;
@@ -2571,7 +2581,8 @@ body {
   display: flex;
 }
 
-.title_the-lot-radio-2, .title_the-lot-radio-3 {
+.title_the-lot-radio-2,
+.title_the-lot-radio-3 {
   color: #fff;
   text-align: center;
   margin-top: 0;
@@ -2628,7 +2639,7 @@ body {
 }
 
 .video {
-  background-image: url('https://d3e54v103j8qbb.cloudfront.net/img/background-image.svg');
+  background-image: url("https://d3e54v103j8qbb.cloudfront.net/img/background-image.svg");
   background-position: 0 0;
   background-size: auto;
   height: 100vh;
@@ -2662,7 +2673,7 @@ body {
   margin-left: 0;
   margin-right: 0;
   line-height: 100%;
-  transition: opacity .2s;
+  transition: opacity 0.2s;
   display: flex;
   transform: rotate(90deg);
 }
@@ -2709,20 +2720,21 @@ body {
 .cover_grid {
   grid-column-gap: 16px;
   grid-row-gap: 22px;
-  grid-template: ". . Area Area-2 . . . . . . ."
-                 "Area-5 . Area-3 . . . . . . . ."
-                 ". . Area-4 . . . . . . . ."
-                 ". . . . . . . . . . ."
-                 ". . . . . . . . . . ."
-                 "Area-6 . . . . . . . . . Area-7"
-                 / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template:
+    ". . Area Area-2 . . . . . . ."
+    "Area-5 . Area-3 . . . . . . . ."
+    ". . Area-4 . . . . . . . ."
+    ". . . . . . . . . . ."
+    ". . . . . . . . . . ."
+    "Area-6 . . . . . . . . . Area-7"
+    / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-auto-columns: 1fr;
   height: 100vh;
   display: grid;
 }
 
 .vinyl {
-  background-image: url('../images/vynil.svg');
+  background-image: url("../images/vynil.svg");
   background-position: 50%;
   background-size: cover;
   justify-content: center;
@@ -2748,7 +2760,8 @@ body {
   display: block;
 }
 
-.image-2, .image-3 {
+.image-2,
+.image-3 {
   display: block;
 }
 
@@ -2768,35 +2781,35 @@ body {
   place-self: center start;
 }
 
-#w-node-d9df1a55-82c0-feea-ec94-7da4d3a5e894-8330fccf, #w-node-df8cedf3-646f-f166-987c-61265e715d6b-8330fccf {
+#w-node-d9df1a55-82c0-feea-ec94-7da4d3a5e894-8330fccf,
+#w-node-df8cedf3-646f-f166-987c-61265e715d6b-8330fccf {
   grid-area: ARROWS;
 }
 
-
 @font-face {
-  font-family: 'Aktura';
-  src: url('../fonts/Aktura-Regular.woff') format('woff');
+  font-family: "Aktura";
+  src: url("../fonts/Aktura-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: 'IBMPlexMono';
-  src: url('../fonts/IBMPlexMono-Regular.ttf') format('truetype');
+  font-family: "IBMPlexMono";
+  src: url("../fonts/IBMPlexMono-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: 'IBMPlexMono';
-  src: url('../fonts/IBMPlexMono-Medium.ttf') format('truetype');
+  font-family: "IBMPlexMono";
+  src: url("../fonts/IBMPlexMono-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: 'IBMPlexMono';
-  src: url('../fonts/IBMPlexMono-Bold.ttf') format('truetype');
+  font-family: "IBMPlexMono";
+  src: url("../fonts/IBMPlexMono-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -2827,7 +2840,7 @@ body {
   aspect-ratio: 1/1;
   position: absolute;
   background: rgb(255, 255, 255);
-  opacity: .4;
+  opacity: 0.4;
   top: 32px;
   left: 32px;
   display: flex;
@@ -2841,7 +2854,6 @@ body {
   opacity: 1;
   cursor: pointer;
 }
-
 
 .about-content {
   width: calc(60% - 16px);
@@ -2858,6 +2870,12 @@ body {
   font-size: 14px;
   color: white;
   opacity: 1;
+}
+
+.about-logo {
+  font-family: "Rajdhani", "ibm-plex-mono", sans-serif;
+  font-size: 2rem;
+  color: white;
 }
 
 .about-content .content {
@@ -2894,11 +2912,23 @@ body {
 
 .content-05 {
   grid-row: span 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-05 img {
+  height: 70%;
+  aspect-ratio: 1/1;
 }
 
 .content-06 {
   grid-column: span 2;
   grid-row: span 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .content-07 {
@@ -2945,22 +2975,22 @@ body {
 }
 
 .about-links {
-    display: flex;
-    flex-direction: row;
-    gap: 16px;
-    justify-content: space-around;
-    align-items: start;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  justify-content: space-around;
+  align-items: start;
 }
 
 .about-links a {
-    text-decoration: none;
-    color: white;
-    font-size: 1.1rem;
-    transition: 1s ease-out;
+  text-decoration: none;
+  color: white;
+  font-size: 1.1rem;
+  transition: 1s ease-out;
 }
 
 .about-links a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .content-11 {
@@ -2972,109 +3002,108 @@ body {
   gap: 16px;
   align-items: start;
   justify-content: end;
-  font-size: .7rem;
-  
+  font-size: 0.7rem;
 }
 
 /*––––––––––––––––––––––––––––––––––––––heading.css––––––––––––––––––––––––––––––––––––––––––––*/
 body {
-  width: 100vw;}
-  .first {
-    display: flex;
-    align-items: end;
-    height: 70vh; /* o l'altezza che preferisci */
-    position: relative;
-  }
-  .first h1 {
-    letter-spacing: 2%;
-    font-size: 4em;
-  }
-  .sopra,
-  .sotto {
-    position: absolute;
-    text-align: center;
-  }
-  .sotto {
-    width: 100%;
-    height: fit-content;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-  }
-  
-  #sotto-writing {
-    width: 80%;
-    height: fit-content;
-    font-size: 3rem;
-    font-weight: 700;
-    line-height: 1;
-    color: white;
-  }
-  
-  #sopra {
-    width: 100vw;
-    height: 100vh;
-  }
-  #sopra canvas {
-    width: 100vw;
-    height: 100vh;
-    display: block; /* Per rimuovere eventuali margini */
-    opacity: calc(100%);
-  }
-  .sotto h1 {
-    color: white;
-    font-size: 10em;
-    letter-spacing: -5%;
-    position: relative;
-    top: -50%; /* regola per posizionare il testo sopra o sotto */
-    font-family: "Suisse Intl mono";
-  }
-  
-  /*–––––––––––––––––––––––––––––––––––––––––––––––––––––*/
-  
-  .introduction {
-    width: 100%;
-    height: 10vh;
-    margin-top: -15%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
-    font-weight: 600;
-    color: #ffffff;
-    opacity: calc(80%);
-  }
-  
-  .instructions {
-    margin-top: 8%;
-    width: 100%;
-    height: 30vh;
-    padding: 0px 20% 0px 20%;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    grid-template-rows: repeat(2, minmax(0, 1fr));
-    gap: 8px;
-  }
-  
-  .block-instructions {
-    display: flex;
-    align-items: center;
-    font-size: 1.5rem;
-    color: #ffffff;
-  }
-  
-  .sx-text {
-    justify-content: left;
-  }
-  .dx-text {
-    justify-content: right;
-  }
-  
+  width: 100vw;
+}
+.first {
+  display: flex;
+  align-items: end;
+  height: 70vh; /* o l'altezza che preferisci */
+  position: relative;
+}
+.first h1 {
+  letter-spacing: 2%;
+  font-size: 4em;
+}
+.sopra,
+.sotto {
+  position: absolute;
+  text-align: center;
+}
+.sotto {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
 
-  /*index.css*/
+#sotto-writing {
+  width: 80%;
+  height: fit-content;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1;
+  color: white;
+}
+
+#sopra {
+  width: 100vw;
+  height: 100vh;
+}
+#sopra canvas {
+  width: 100vw;
+  height: 100vh;
+  display: block; /* Per rimuovere eventuali margini */
+  opacity: calc(100%);
+}
+.sotto h1 {
+  color: white;
+  font-size: 10em;
+  letter-spacing: -5%;
+  position: relative;
+  top: -50%; /* regola per posizionare il testo sopra o sotto */
+  font-family: "Suisse Intl mono";
+}
+
+/*–––––––––––––––––––––––––––––––––––––––––––––––––––––*/
+
+.introduction {
+  width: 100%;
+  height: 10vh;
+  margin-top: -15%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #ffffff;
+  opacity: calc(80%);
+}
+
+.instructions {
+  margin-top: 8%;
+  width: 100%;
+  height: 30vh;
+  padding: 0px 20% 0px 20%;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.block-instructions {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
+.sx-text {
+  justify-content: left;
+}
+.dx-text {
+  justify-content: right;
+}
+
+/*index.css*/
 * {
-  font-family:  "ibm-plex-mono", sans-serif;
+  font-family: "ibm-plex-mono", sans-serif;
 }
 body {
   background: black;
@@ -3087,17 +3116,13 @@ body {
   position: fixed;
   z-index: -1;
   overflow: hidden;
+  mix-blend-mode: multiply;
 }
-#video_background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100%;
-  object-fit: cover; /* Copre l'intera area senza distorcere il video */
-  z-index: -1;
-  opacity: 1;
+
+.video-background video {
+  opacity: 0.5;
 }
+
 button {
   background: transparent;
   font-family: monospace;
@@ -3122,7 +3147,7 @@ button {
   overflow: hidden !important;
   z-index: 2 !important;
   background-color: transparent;
-  top:0; 
+  top: 0;
 }
 /* Add a wrapper to control the sticky section length */
 .sticky-wrapper {
@@ -3167,44 +3192,44 @@ footer a:hover {
   text-decoration: underline;
 }
 #footer_credits {
-  transition: .3s;
+  transition: 0.3s;
 }
 #footer_credits:hover {
   text-decoration: underline;
-} 
+}
 
 /*loading.css*/
 /*loading.css*/
 /* CSS per il video di sfondo */
 .video_background {
-position: fixed; /* Fissa il video */
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-z-index: -1; /* Manda il video dietro gli altri elementi */
-overflow: hidden;
-transition: opacity 1s ease-in-out;
+  position: fixed; /* Fissa il video */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Manda il video dietro gli altri elementi */
+  overflow: hidden;
+  transition: opacity 1s ease-in-out;
 }
 #video_background {
-width: 100%;
-height: 100%;
-object-fit: cover; /* Adatta il video per coprire l'intero schermo */
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Adatta il video per coprire l'intero schermo */
 }
 /* CSS per il contenitore della scena Three.js */
 .threejs-container {
-width: 100%;
-height: 100vh; /* Occupa l'intera altezza della finestra */
-background-color: transparent; /* Sfondo trasparente per vedere il video */
-opacity: 0;
-transition: opacity 1s ease-in-out;
+  width: 100%;
+  height: 100vh; /* Occupa l'intera altezza della finestra */
+  background-color: transparent; /* Sfondo trasparente per vedere il video */
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
 }
 /* Main content transitions */
 .first,
 footer,
 button {
-opacity: 0;
-transition: opacity 1s ease-in-out;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
 }
 /* Show content when loaded */
 body.loaded .video_background,
@@ -3212,65 +3237,67 @@ body.loaded .threejs-container,
 body.loaded .first,
 body.loaded footer,
 body.loaded button {
-opacity: 1;
+  opacity: 1;
 }
 /* Loading overlay styles */
 #loading-overlay {
-position: fixed;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-background-color: #000000;
-display: flex;
-justify-content: center;
-align-items: center;
-z-index: 9999;
-transition: opacity 0.8s ease-in-out;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(16, 16, 16);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.8s ease-in-out;
 }
 .loading-container {
-display: flex;
-flex-direction: row;
-align-items: center;
-gap: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
 }
 .vinyl-spinner {
-width: 200px;
-height: 200px;
-animation: spin 2s linear infinite;
-opacity: .5;
+  width: 200px;
+  height: 200px;
+  animation: spin 2s linear infinite;
+  opacity: 0.5;
 }
 @keyframes spin {
-0% {
-  transform: rotate(0deg);
-}
-100% {
-  transform: rotate(360deg);
-}
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 .loading-text {
-color: white;
-font-size: 5rem;
-font-family: "Rajdhani", sans-serif;
-font-weight: 600;
-opacity: 1;
-transition: opacity 0.3s ease-in-out;
-text-transform: uppercase;
-letter-spacing: 2px;
+  color: white;
+  font-size: 5rem;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 600;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 #load-over-text {
-color: white;
-font-size: 5rem;
-font-family: "Rajdhani", sans-serif;
-opacity: .5;
-transition: opacity 0.3s ease-in-out;
-letter-spacing: 2px;
-line-height: .8;
+  color: white;
+  font-size: 5rem;
+  font-family: "Rajdhani", sans-serif;
+  opacity: 0.5;
+  transition: opacity 0.3s ease-in-out;
+  letter-spacing: 2px;
+  line-height: 0.8;
 }
 /* Optionally hide old spinner/text */
-.spinner, .loading-text { display: none !important; }
-
+.spinner,
+.loading-text {
+  display: none !important;
+}
 
 /*======================================================================*/
 #threejs-container {
@@ -3420,7 +3447,7 @@ body.loaded #loading-overlay {
 }
 
 .scroll-line::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -3431,25 +3458,25 @@ body.loaded #loading-overlay {
 }
 @keyframes scrollLine {
   0% {
-      transform: translateY(-100%);
-      opacity: 0;
+    transform: translateY(-100%);
+    opacity: 0;
   }
   20% {
-      opacity: 1;
+    opacity: 1;
   }
   80% {
-      opacity: 1;
+    opacity: 1;
   }
   100% {
-      transform: translateY(100%);
-      opacity: 0;
+    transform: translateY(100%);
+    opacity: 0;
   }
 }
 /* Fade out when scrolled */
 .scroll-indicator.fade-out {
   opacity: 0;
   transition: opacity 0.5s ease;
-} 
+}
 .fade-out {
   opacity: 0;
   transition: opacity 0.4s;
@@ -3462,7 +3489,7 @@ body.loaded #loading-overlay {
   position: fixed;
   top: 8%;
   left: 32px;
-  opacity: .5;
+  opacity: 0.5;
   transition: 300ms;
   pointer-events: auto;
   z-index: 2;
