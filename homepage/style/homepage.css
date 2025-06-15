@@ -3713,7 +3713,7 @@ body.loaded #loading-overlay {
     gap: 32px;
     z-index: 7;
     bottom: 10%;
-    left: 16px;
+    left: 16px !important;
     pointer-events: auto;
   }
 
