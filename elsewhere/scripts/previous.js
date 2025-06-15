@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   let camera, scene, renderer, model;
-  let container = document.getElementById("next");
+  let container = document.getElementById("previous");
 
   if (!container) {
     console.error("Container element not found");
