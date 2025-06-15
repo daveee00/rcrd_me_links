@@ -539,7 +539,6 @@ footer {
   height: 771px;
   margin: 200px auto 0 auto;
   overflow: hidden;
-  background: black;
   animation: boxPulse 1.5s ease-in-out infinite;
   }
   
@@ -639,7 +638,6 @@ footer {
   height: 771px;
   overflow: hidden;
   margin-top: 500px; /* spazio sopra, se necessario */
-  background: black;
   }
   
   .fullwidth-photo img {
