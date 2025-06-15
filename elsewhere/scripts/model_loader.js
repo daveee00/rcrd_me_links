@@ -1,25 +1,23 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener('DOMContentLoaded', function() {
   // Ensure Three.js is loaded
   if (!window.THREE) {
-    console.error("Three.js is not loaded");
+    console.error('Three.js is not loaded');
     return;
   }
-
+  
   let camera, scene, renderer, model;
   let container = document.getElementById("vinile");
-
+  
   if (!container) {
-    console.error("Container element not found");
+    console.error('Container element not found');
     return;
   }
-
+  
   let clock = new THREE.Clock();
   // Set up renderer
   const width = container.clientWidth;
-  // Check for mobile devices and set appropriate height
-  const isMobile = window.matchMedia("(max-width: 428px)").matches;
-  const height = isMobile ? (container.clientHeight || 200) : (container.clientHeight || 400); // Use clientHeight with fallback to 200px for mobile
-  camera = new THREE.PerspectiveCamera(25, width / height, 0.25, 200);
+  const height = container.clientHeight || 400; // fallback height
+  camera = new THREE.PerspectiveCamera(35, width / height, 0.25, 200);
   camera.position.set(-63, 0, 20);
   camera.lookAt(0, 0, 0);
   scene = new THREE.Scene();
@@ -34,9 +32,9 @@ document.addEventListener("DOMContentLoaded", function () {
     "https://rcrdme-gnmr.netlify.app/blender-exp/disco1994clubmix.glb",
     function (gltf) {
       model = gltf.scene;
-      model.scale.set(10, 10, 10);
+      model.scale.set(6, 6, 6);
       model.position.set(0, 0, 0);
-      model.rotation.set(0, 0, Math.PI / 2);
+      model.rotation.set(Math.PI / 2, 0, Math.PI / 2);
       scene.add(model);
     },
     undefined,
@@ -53,8 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Responsive
   window.addEventListener("resize", function () {
     const w = container.clientWidth;
-    const isMobile = window.matchMedia("(max-width: 428px)").matches;
-    const h = isMobile ? (container.clientHeight || 200) : (container.clientHeight || 400); // Use clientHeight with fallback to 200px for mobile
+    const h = container.clientHeight || 400;
     camera.aspect = w / h;
     camera.updateProjectionMatrix();
     renderer.setSize(w, h);
@@ -64,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function animate() {
     requestAnimationFrame(animate);
     if (model) {
-      model.rotation.y += 0.007;
+      model.rotation.y -= 0.01;
     }
     renderer.render(scene, camera);
   }
