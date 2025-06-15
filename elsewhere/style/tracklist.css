@@ -131,9 +131,9 @@
 
 .scroll-text-section .text {
   display: inline-block;
-  padding-right: 6rem;
+  padding-right: 40px;
   font-family: "VCR OSD Mono";
-  font-size: 3rem;
+  font-size: 6rem;
   font-weight: bold;
   white-space: nowrap;
   flex-shrink: 0;
