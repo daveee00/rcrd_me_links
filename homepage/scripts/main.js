@@ -159,11 +159,11 @@
     ];
 
     const in_construction = [
-      "https://cdn.jsdelivr.net/gh/daveee00/export_blender/clubDerVisionere.glb",
-      "https://cdn.jsdelivr.net/gh/daveee00/export_blender/goa.glb",
-      "https://cdn.jsdelivr.net/gh/daveee00/export_blender/teller.glb",
-      "https://cdn.jsdelivr.net/gh/daveee00/export_blender/theLotRadio.glb",
-      "https://cdn.jsdelivr.net/gh/daveee00/export_blender/haudio.glb",
+      "https://rcrdme-gnmr.netlify.app/blender-exp/clubdervisionere.glb",
+      "https://rcrdme-gnmr.netlify.app/blender-exp/goa.glb",
+      "https://rcrdme-gnmr.netlify.app/blender-exp/teller.glb",
+      "https://rcrdme-gnmr.netlify.app/blender-exp/thelotradio.glb",
+      "https://rcrdme-gnmr.netlify.app/blender-exp/haudio.glb",
     ];
 
     const videoBG = [
