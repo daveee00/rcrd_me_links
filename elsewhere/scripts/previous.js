@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Set up renderer
   const width = container.clientWidth;
   // Check for mobile devices and set appropriate height
-  const isMobile = window.matchMedia("(max-width: 428px)").matches;
+  const isMobile = window.matchMedia("(max-width: 768px)").matches;
   const height = isMobile ? (container.clientHeight || 200) : (container.clientHeight || 400); // Use clientHeight with fallback to 200px for mobile
   camera = new THREE.PerspectiveCamera(25, width / height, 0.25, 200);
   camera.position.set(-63, 0, 20);
