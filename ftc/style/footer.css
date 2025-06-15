@@ -73,7 +73,7 @@ footer {
   border: none;
   position: absolute;
   transform: rotate(90deg);
-  right: 32px !important;
+  right: 32px;
   margin-right: 32px;
   bottom: 20%;
   padding: 0;
