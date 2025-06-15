@@ -45,6 +45,7 @@
 
 #tracklist-title {
   font-size: 2rem;
+  line-height: 1;
   font-weight: 700;
   text-transform: uppercase;
   display: flex;
@@ -53,12 +54,14 @@
 
 #tracklist-artist {
   font-size: 1rem;
+  line-height: 1;
   font-weight: 700;
   margin-bottom: 64px;
 }
 
 .side {
   font-size: 1.2rem;
+  line-height: 1;
   font-weight: 600;
   display: flex;
   flex-direction: column;
