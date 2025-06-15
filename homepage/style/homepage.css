@@ -3226,8 +3226,8 @@ body.loaded button {
   gap: 20px;
 }
 .vinyl-spinner {
-  width: 400px;
-  height: 400px;
+  width: 200px;
+  height: 200px;
   animation: spin 2s linear infinite;
   opacity: .5;
 }
