@@ -65,35 +65,51 @@
 
     // MODELS TO LOAD
     const modelsToLoad = [
-      "https://rcrdme-gnmr.netlify.app/blender-exp/clubdervisionere.glb",
-      "https://rcrdme-gnmr.netlify.app/blender-exp/elsewhere.glb",
-      "https://rcrdme-gnmr.netlify.app/blender-exp/vena.glb",
-      "https://rcrdme-gnmr.netlify.app/blender-exp/forthecause.glb",
-      "https://rcrdme-gnmr.netlify.app/blender-exp/goa.glb",
-      "https://rcrdme-gnmr.netlify.app/blender-exp/haudio.glb",
-      "https://rcrdme-gnmr.netlify.app/blender-exp/hor.glb",
-      "https://rcrdme-gnmr.netlify.app/blender-exp/lesenfants.glb",
-      "https://rcrdme-gnmr.netlify.app/blender-exp/thelotradio.glb",
-      "https://rcrdme-gnmr.netlify.app/blender-exp/radiopirate.glb",
-      "https://rcrdme-gnmr.netlify.app/blender-exp/teller.glb",
-      "https://rcrdme-gnmr.netlify.app/blender-exp/teknobirrette.glb",
+      "https://cdn.jsdelivr.net/gh/daveee00/export_blender/clubDerVisionere.glb",
+      "https://cdn.jsdelivr.net/gh/daveee00/export_blender/elsewhere.glb",
+      "https://cdn.jsdelivr.net/gh/daveee00/export_blender/vena.glb",
+      "https://cdn.jsdelivr.net/gh/daveee00/export_blender/forTheCause.glb",
+      "https://cdn.jsdelivr.net/gh/daveee00/export_blender/goa.glb",
+      "https://cdn.jsdelivr.net/gh/daveee00/export_blender/haudio.glb",
+      "https://cdn.jsdelivr.net/gh/daveee00/export_blender/hor.glb",
+      "https://cdn.jsdelivr.net/gh/daveee00/export_blender/lesEnfants.glb",
+      "https://cdn.jsdelivr.net/gh/daveee00/export_blender/theLotRadio.glb",
+      "https://cdn.jsdelivr.net/gh/daveee00/export_blender/radioPirate.glb",
+      "https://cdn.jsdelivr.net/gh/daveee00/export_blender/teller.glb",
+      "https://cdn.jsdelivr.net/gh/daveee00/export_blender/teknoBirrette.glb",
     ];
     // PAGE LINKS
     const pageLinks = [
       "/performances/club-der-visionaire",
-      "https://wddc-slipknot.webflow.io/performances/elsewhere-seoul",
-      "https://wddc-slipknot.webflow.io/performances/endovena-festival",
-      "https://wddc-slipknot.webflow.io/performances/for-the-cause",
+      "/performances/elsewhere",
+      "/pages/vena/vena.html",
+      "/pages/for-the-cause/for-the-cause.html",
       "/performances/goa-last-dance",
       "/performances/haudio",
-      "https://wddc-slipknot.webflow.io/performances/hor",
+      "/performances/hor",
       "/performances/les-elephants",
       "/performances/lot-radio",
-      "https://wddc-slipknot.webflow.io/performances/radio-pirate",
+      "/pages/radio-pirate/radio-pirate.html",
       "/performances/teller",
-      "https://wddc-slipknot.webflow.io/performances/tekno-birrette",
+      "/performances/tekno-birrette",
     ];
-    
+
+    //page performance css
+    const pageStyles = [
+      "https://cdn.jsdelivr.net/gh/daveee00/scripts-for-the-cause-test/ftc.css",
+      "https://cdn.jsdelivr.net/gh/daveee00/scripts-for-the-cause-test/ftc.css",
+      "https://cdn.jsdelivr.net/gh/daveee00/scripts-for-the-cause-test/ftc.css",
+      "https://cdn.jsdelivr.net/gh/daveee00/scripts-for-the-cause-test/ftc.css",
+      "https://cdn.jsdelivr.net/gh/daveee00/scripts-for-the-cause-test/ftc.css",
+      "https://cdn.jsdelivr.net/gh/daveee00/scripts-for-the-cause-test/ftc.css",
+      "https://cdn.jsdelivr.net/gh/daveee00/scripts-for-the-cause-test/ftc.css",
+      "https://cdn.jsdelivr.net/gh/daveee00/scripts-for-the-cause-test/ftc.css",
+      "https://cdn.jsdelivr.net/gh/daveee00/scripts-for-the-cause-test/ftc.css",
+      "https://cdn.jsdelivr.net/gh/daveee00/scripts-for-the-cause-test/ftc.css",
+      "https://cdn.jsdelivr.net/gh/daveee00/scripts-for-the-cause-test/ftc.css",
+      "https://cdn.jsdelivr.net/gh/daveee00/scripts-for-the-cause-test/ftc.css",
+    ];
+
     // backgrounds for active page
     const vinylBackground = [
       "linear-gradient(270deg, #EEDC9A, #F5EEC0, #D6BB7D)",
@@ -143,12 +159,26 @@
     ];
 
     const in_construction = [
-      "https://rcrdme-gnmr.netlify.app/blender-exp/clubdervisionere.glb",
-      "https://rcrdme-gnmr.netlify.app/blender-exp/goa.glb",
-      "https://rcrdme-gnmr.netlify.app/blender-exp/teller.glb",
-      "https://rcrdme-gnmr.netlify.app/blender-exp/theLotRadio.glb",
-      "https://rcrdme-gnmr.netlify.app/blender-exp/haudio.glb",
-      "https://rcrdme-gnmr.netlify.app/blender-exp/lesenfants.glb",
+      "https://cdn.jsdelivr.net/gh/daveee00/export_blender/clubDerVisionere.glb",
+      "https://cdn.jsdelivr.net/gh/daveee00/export_blender/goa.glb",
+      "https://cdn.jsdelivr.net/gh/daveee00/export_blender/teller.glb",
+      "https://cdn.jsdelivr.net/gh/daveee00/export_blender/theLotRadio.glb",
+      "https://cdn.jsdelivr.net/gh/daveee00/export_blender/haudio.glb",
+    ];
+
+    const videoBG = [
+      "https://rcrdme-gnmr.netlify.app/homepage/videobg-darker-grey.mp4",
+      "https://rcrdme-gnmr.netlify.app/homepage/elsewhere.mp4",
+      "https://rcrdme-gnmr.netlify.app/homepage/videovena.mp4",
+      "https://rcrdme-gnmr.netlify.app/homepage/videofdc.mp4",
+      "https://rcrdme-gnmr.netlify.app/homepage/videobg-darker-grey.mp4",
+      "https://rcrdme-gnmr.netlify.app/homepage/videobg-darker-grey.mp4",
+      "https://rcrdme-gnmr.netlify.app/homepage/videohor.mp4",
+      "https://rcrdme-gnmr.netlify.app/homepage/videobg-darker-grey.mp4",
+      "https://rcrdme-gnmr.netlify.app/homepage/videobg-darker-grey.mp4",
+      "https://rcrdme-gnmr.netlify.app/homepage/videoradiopirate.mp4",
+      "https://rcrdme-gnmr.netlify.app/homepage/videobg-darker-grey.mp4",
+      "https://rcrdme-gnmr.netlify.app/homepage/teknobirrette.mp4",
     ];
 
 
@@ -506,39 +536,6 @@
 
     //–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 
-    function getRandomVideo() {
-      const videos = [
-        "/videos/pageActive/bda.mp4",
-        "/videos/pageActive/swt.mp4",
-        "/videos/pageActive/dw.mp4",
-        "/videos/pageActive/pos.mp4",
-        "/videos/pageActive/mye.mp4",
-      ];
-      return videos[Math.floor(Math.random() * videos.length)];
-    }
-
-    //–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-
-    function changeVideoBackground() {
-      const videoElement = document.getElementById("video_background");
-      if (videoElement) {
-        videoElement.src = getRandomVideo();
-        videoElement.load();
-      }
-    }
-
-    //–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-
-    function restoreDefaultVideo() {
-      const videoElement = document.getElementById("video_background");
-      if (videoElement) {
-        videoElement.src = "/videos/Liquid Abstract Neon Green 4K.mp4";
-        videoElement.load();
-      }
-    }
-
-    //–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-
     function init() {
       // Force scroll to top again during initialization
       window.scrollTo(0, 0);
@@ -637,7 +634,7 @@
       // Add grey gradient background if model is in construction
       const isInConstruction = in_construction.includes(modelsToLoad[clickedModel.userData.originalIndex]);
       if (isInConstruction) {
-        modelSelected.style.background = "linear-gradient(180deg, rgba(59, 59, 59, 0.8) 0%, rgba(64, 64, 64, 0.8) 100%)";
+        modelSelected.style.background = "";
       }
 
       // Create canvas for the selected model
@@ -774,7 +771,6 @@
         });
 
         isModelClicked = true;
-        changeVideoBackground();
         let clickedModel = intersects[0].object;
         while (clickedModel.parent && !loadedModels.includes(clickedModel)) {
           clickedModel = clickedModel.parent;
@@ -810,7 +806,8 @@
         performanceSpecifics.style.display = 'flex';
         performanceSpecifics.style.flexDirection = 'column';
         performanceSpecifics.style.justifyContent = 'space-evenly';
-        performanceSpecifics.style.marginLeft = '32px';
+        performanceSpecifics.style.marginLeft =
+          window.innerWidth <= 428 ? "16px" : '32px';
         performanceSpecifics.style.marginBottom = '64px';
         performanceSpecifics.style.position = 'relative';
         performanceSpecifics.style.pointerEvents = 'none';
@@ -821,7 +818,7 @@
         performanceTitle.style.color = 'white';
         performanceTitle.style.margin = '0px';
         performanceTitle.style.padding = '0px';
-        performanceTitle.style.fontSize = '3em';
+        performanceTitle.style.fontSize = window.innerWidth <= 428 ? '2em' : '3em';
         performanceTitle.style.opacity = '0.6';
         performanceTitle.textContent = title_performance[clickedIndex];
 
@@ -831,9 +828,15 @@
         datePerformance.style.color = 'white';
         datePerformance.style.margin = '0px';
         datePerformance.style.padding = '0px';
-        datePerformance.style.fontSize = '1.5em';
+        datePerformance.style.fontSize = window.innerWidth <= 428 ? '1em' : '1.5em';
         datePerformance.style.fontFamily = 'monospace';
         datePerformance.textContent = data_luogo[clickedIndex];
+
+        // Add window resize listener to update font sizes
+        window.addEventListener('resize', () => {
+            performanceTitle.style.fontSize = window.innerWidth <= 428 ? '2em' : '3em';
+            datePerformance.style.fontSize = window.innerWidth <= 428 ? '1em' : '1.5em';
+        });
 
         // Add title and date to performance specifics
         performanceSpecifics.appendChild(performanceTitle);
@@ -846,8 +849,9 @@
         if (!isInConstruction) {
           const playButton = document.createElement('button');
           playButton.id = 'play-button';
-          playButton.style.height = '8vh';
-          playButton.style.aspectRatio = '16/9';
+          playButton.style.height = window.innerWidth <= 428 ? "8vh" : "8vh";
+          playButton.style.aspectRatio =
+            window.innerWidth <= 428 ? "4/3" : '16/9';
           playButton.style.cursor = 'pointer';
           playButton.style.background = 'none';
           playButton.style.border = '4px solid white';
@@ -856,7 +860,8 @@
           playButton.style.textTransform = 'uppercase';
           playButton.style.position = 'relative';
           playButton.style.marginBottom = '64px';
-          playButton.style.marginRight = '32px';
+          playButton.style.marginRight =
+            window.innerWidth <= 428 ? "16px" : '32px';
           playButton.style.fontSize = '1.5em';
           playButton.style.transition = '400ms ease-out';
           playButton.style.pointerEvents = 'auto';
@@ -925,11 +930,11 @@
         // Add coming soon image if model is in construction
         if (isInConstruction) {
           const comingSoonImg = document.createElement('img');
-          comingSoonImg.src = 'https://rcrdme-gnmr.netlify.app/homepage/coming-soon.svg';
+          comingSoonImg.src = 'coming-soon.svg';
           comingSoonImg.style.position = 'absolute';
           comingSoonImg.style.top = '32px';
-          comingSoonImg.style.right = '32px';
-          comingSoonImg.style.height = "50%"
+          comingSoonImg.style.right = window.innerWidth <= 428 ? "16px" : "32px";
+          comingSoonImg.style.height = window.innerWidth <= 428 ? "40%" : "50%";
           comingSoonImg.style.opacity = ".5"
           modelBackground.appendChild(comingSoonImg);
         }
@@ -958,7 +963,7 @@
         closeBtn.style.background = "none";
         closeBtn.style.border = "none";
         closeBtn.style.cursor = "pointer";
-        closeBtn.style.padding = "32px";
+        closeBtn.style.padding = window.innerWidth <= 428 ? "32px 16px" : "32px";
         closeBtn.style.opacity = "0.5";
         closeBtn.style.transition = "opacity 300ms ease-out";
         closeBtn.style.pointerEvents = 'auto';
