@@ -82,7 +82,7 @@ footer {
   .footer-back-to-top {
     display: none;
     position: fixed;
-    right: 64px !important;
+    right: 64px;
     bottom: 8%;
     background: none;
     color: #ff0000;
