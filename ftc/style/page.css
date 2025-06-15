@@ -35,13 +35,13 @@ body {
   mix-blend-mode: overlay;
 }
 
-.header-rp .performance-title img {
-  width: 50%;
-  margin-top: 8%;
+.header-rp img {
+    width: 50% !important;
+    mix-blend-mode: overlay;
 }
 
-.header-rp .date-container .performance-date {
-  font-size: 20px;
+.date {
+    font-size: 30px;
 }
 
 /* ===== for the cause ===== */
