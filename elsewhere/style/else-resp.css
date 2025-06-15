@@ -539,6 +539,7 @@ footer {
   height: 771px;
   margin: 200px auto 0 auto;
   overflow: hidden;
+      background: none !important;
   animation: boxPulse 1.5s ease-in-out infinite;
   }
   
