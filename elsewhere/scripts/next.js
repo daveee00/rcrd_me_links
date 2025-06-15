@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const width = container.clientWidth;
   // Check for mobile devices and set appropriate height
   const isMobile = window.matchMedia("(max-width: 428px)").matches;
-  const height = isMobile ? 300 : (container.clientHeight || 400); // Set 300px height for mobile
+  const height = isMobile ? (container.clientHeight || 200) : (container.clientHeight || 400); // Use clientHeight with fallback to 200px for mobile
   camera = new THREE.PerspectiveCamera(25, width / height, 0.25, 200);
   camera.position.set(-63, 0, 20);
   camera.lookAt(0, 0, 0);
@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("resize", function () {
     const w = container.clientWidth;
     const isMobile = window.matchMedia("(max-width: 428px)").matches;
-    const h = isMobile ? 300 : (container.clientHeight || 400); // Set 300px height for mobile
+    const h = isMobile ? (container.clientHeight || 200) : (container.clientHeight || 400); // Use clientHeight with fallback to 200px for mobile
     camera.aspect = w / h;
     camera.updateProjectionMatrix();
     renderer.setSize(w, h);
