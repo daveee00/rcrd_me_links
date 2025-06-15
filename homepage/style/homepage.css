@@ -3005,6 +3005,188 @@ body {
   font-size: 0.7rem;
 }
 
+@media screen and (max-width: 428px) {
+  #about-overlay {
+    z-index: 500;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    /*background: rgba(30, 30, 30, .8);*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 80;
+  }
+
+  #close-about {
+    width: 44px;
+    aspect-ratio: 1/1;
+    position: absolute;
+    background: rgb(255, 255, 255);
+    opacity: 0.4;
+    top: 32px;
+    left: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 400ms ease-out;
+  }
+
+  .about-content {
+    width: calc(100% - 32px);
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    display: grid;
+    gap: 8px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-auto-rows: 100px;
+  }
+
+  .about-text {
+    font-size: 14px;
+    color: white;
+    opacity: 1;
+  }
+
+  .about-logo {
+    font-family: "Rajdhani", "ibm-plex-mono", sans-serif;
+    font-size: 2rem;
+    color: white;
+  }
+
+  .about-content .content-01 {
+    grid-column: span 3;
+    grid-row: span 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .about-content .content-02 {
+    grid-column: span 3;
+    grid-row: span 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+  }
+
+  .content-03 {
+    display: none;
+  }
+
+  .content-04 {
+    display: none;
+  }
+
+  .content-05 {
+    grid-column: span 3;
+    grid-row: span 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .content-05 img {
+    height: 60%;
+    aspect-ratio: 1/1;
+  }
+
+  .content-06 {
+    grid-column: span 3;
+    grid-row: span 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+  }
+
+  .content-07 {
+    grid-column: span 3;
+    grid-row: span 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    gap: 12px;
+  }
+
+  .about-title {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 700;
+  }
+  .content-08 {
+    grid-row: span 5;
+    grid-column: span 3;
+    background: url(https://rcrdme-gnmr.netlify.app/homepage/gnmr-about.png);
+    background-size: cover;
+    background-position: center;
+  }
+
+  .content-09 {
+    grid-row: span 2;
+    grid-column: span 3;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+  }
+
+  .resp {
+    display: none;
+  }
+  .content-spacer {
+    grid-row: span 2;
+    grid-column: span 3;
+  }
+
+  .content-10 {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+  }
+
+  .about-links {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    justify-content: space-around;
+    align-items: start;
+  }
+
+  .about-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    transition: 1s ease-out;
+  }
+
+  .about-links a:hover {
+    text-decoration: underline;
+  }
+
+  .content-11 {
+    grid-row: span 1;
+    grid-column: span 3;
+    opacity: 0.6;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: start;
+    justify-content: end;
+    font-size: 0.7rem;
+  }
+}
+
 /*––––––––––––––––––––––––––––––––––––––heading.css––––––––––––––––––––––––––––––––––––––––––––*/
 body {
   width: 100vw;
@@ -3039,6 +3221,25 @@ body {
   font-weight: 700;
   line-height: 1;
   color: white;
+}
+
+@media screen and (max-width: 428px){
+  .sotto {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  #sotto-writing {
+    width: 80%;
+    height: fit-content;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: white;
+  }
 }
 
 #sopra {
@@ -3299,6 +3500,25 @@ body.loaded button {
   display: none !important;
 }
 
+@media screen and (max-width: 428px) {
+  .vinyl-spinner {
+    width: 160px;
+    height: 160px;
+    animation: spin 2s linear infinite;
+    opacity: 0.5;
+  }
+  #load-over-text {
+    color: white;
+    font-size:3rem;
+    font-family: "Rajdhani", sans-serif;
+    opacity: 0.5;
+    transition: opacity 0.3s ease-in-out;
+    letter-spacing: 2px;
+    line-height: 0.8;
+  }
+}
+
+
 /*======================================================================*/
 #threejs-container {
   position: fixed;
@@ -3355,6 +3575,8 @@ body.loaded #loading-overlay {
   left: 32px;
   pointer-events: auto;
 }
+
+
 
 .buttons-container a {
   pointer-events: auto;
@@ -3483,6 +3705,96 @@ body.loaded #loading-overlay {
   pointer-events: none;
 }
 
+@media screen and (max-width: 428px) {
+  .buttons-container {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    gap: 32px;
+    z-index: 7;
+    bottom: 10%;
+    left: 16px;
+    pointer-events: auto;
+  }
+
+  .home-button {
+    position: fixed;
+    top: 8%;
+    left: 16px;
+    opacity: 0.5;
+    transition: 300ms;
+    pointer-events: auto;
+    z-index: 2;
+  }
+
+  .scroll-indicator {
+    z-index: 2;
+    opacity: 0.7;
+    pointer-events: none;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 16px;
+    height: fit-content;
+    display: flex;
+    position: fixed;
+    top: 68%;
+    right: 0;
+  }
+  
+  .scroll-indicator > * {
+    pointer-events: none;
+  }
+  
+  .scroll-text {
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    transform-origin: 100%;
+    white-space: nowrap;
+    font-size: 0.8rem;
+    font-family: "ibm-plex-mono", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    position: absolute;
+    top: 60%;
+    right: 16px;
+    transform: rotate(90deg);
+    mix-blend-mode: overlay;
+    pointer-events: none;
+  }
+
+  .scroll-line {
+    background-color: #ffffff;
+    width: 2px;
+    height: 100px;
+    margin-top: 2rem;
+    position: absolute;
+    top: 70%;
+    right: 16px;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  .about-button {
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    transform-origin: 100%;
+    white-space: nowrap;
+    font-size: 0.8rem;
+    position: fixed;
+    z-index: 7;
+    transform: rotate(90deg);
+    cursor: pointer;
+    pointer-events: auto;
+    transition: opacity 0.3s ease;
+    top: 90%;
+    right: 16px;
+    opacity: 0.6;
+    transition: all 800ms ease-out;
+  }
+}
 /*––––––––––––––––––––––––––––––––––––––––––––––––*/
 
 .home-button {
