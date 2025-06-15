@@ -14,20 +14,22 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Add click event listener to navigate
-  container.addEventListener("click", function () {
-    window.location.href = "#";
+  container.addEventListener("click", function() {
+    window.location.href = "https://wddc-slipknot.webflow.io/performances/elsewhere-seoul";
   });
 
   let clock = new THREE.Clock();
   // Set up renderer
   const width = container.clientWidth;
-  const height = container.clientHeight || 400; // fallback height
+  // Check for mobile devices and set appropriate height
+  const isMobile = window.matchMedia("(max-width: 768px)").matches;
+  const height = isMobile ? (container.clientHeight || 200) : (container.clientHeight || 400); // Use clientHeight with fallback to 200px for mobile
   camera = new THREE.PerspectiveCamera(25, width / height, 0.25, 200);
   camera.position.set(-63, 0, 20);
   camera.lookAt(0, 0, 0);
   scene = new THREE.Scene();
   // Lights
-  const hemiLight = new THREE.HemisphereLight(0xffffff, 0xffffff, 2.5);
+  const hemiLight = new THREE.HemisphereLight(0xffffff, 0xffffff, 1);
   hemiLight.position.set(10, 0, 10);
   scene.add(hemiLight);
 
@@ -56,7 +58,8 @@ document.addEventListener("DOMContentLoaded", function () {
   // Responsive
   window.addEventListener("resize", function () {
     const w = container.clientWidth;
-    const h = container.clientHeight || 400;
+    const isMobile = window.matchMedia("(max-width: 428px)").matches;
+    const h = isMobile ? (container.clientHeight || 200) : (container.clientHeight || 400); // Use clientHeight with fallback to 200px for mobile
     camera.aspect = w / h;
     camera.updateProjectionMatrix();
     renderer.setSize(w, h);
