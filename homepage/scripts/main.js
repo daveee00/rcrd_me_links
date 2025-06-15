@@ -65,18 +65,18 @@
 
     // MODELS TO LOAD
     const modelsToLoad = [
-      "https://cdn.jsdelivr.net/gh/daveee00/export_blender/clubDerVisionere.glb",
-      "https://cdn.jsdelivr.net/gh/daveee00/export_blender/elsewhere.glb",
-      "https://cdn.jsdelivr.net/gh/daveee00/export_blender/vena.glb",
-      "https://cdn.jsdelivr.net/gh/daveee00/export_blender/forTheCause.glb",
-      "https://cdn.jsdelivr.net/gh/daveee00/export_blender/goa.glb",
-      "https://cdn.jsdelivr.net/gh/daveee00/export_blender/haudio.glb",
-      "https://cdn.jsdelivr.net/gh/daveee00/export_blender/hor.glb",
-      "https://cdn.jsdelivr.net/gh/daveee00/export_blender/lesEnfants.glb",
-      "https://cdn.jsdelivr.net/gh/daveee00/export_blender/theLotRadio.glb",
-      "https://cdn.jsdelivr.net/gh/daveee00/export_blender/radioPirate.glb",
-      "https://cdn.jsdelivr.net/gh/daveee00/export_blender/teller.glb",
-      "https://cdn.jsdelivr.net/gh/daveee00/export_blender/teknoBirrette.glb",
+      "https://rcrdme-gnmr.netlify.app/blender-exp/clubdervisionere.glb",
+      "https://rcrdme-gnmr.netlify.app/blender-exp/elsewhere.glb",
+      "https://rcrdme-gnmr.netlify.app/blender-exp/vena.glb",
+      "https://rcrdme-gnmr.netlify.app/blender-exp/forthecause.glb",
+      "https://rcrdme-gnmr.netlify.app/blender-exp/goa.glb",
+      "https://rcrdme-gnmr.netlify.app/blender-exp/haudio.glb",
+      "https://rcrdme-gnmr.netlify.app/blender-exp/hor.glb",
+      "https://rcrdme-gnmr.netlify.app/blender-exp/lesenfants.glb",
+      "https://rcrdme-gnmr.netlify.app/blender-exp/thelotradio.glb",
+      "https://rcrdme-gnmr.netlify.app/blender-exp/radiopirate.glb",
+      "https://rcrdme-gnmr.netlify.app/blender-exp/teller.glb",
+      "https://rcrdme-gnmr.netlify.app/blender-exp/teknobirrette.glb",
     ];
     // PAGE LINKS
     const pageLinks = [
@@ -930,7 +930,7 @@
         // Add coming soon image if model is in construction
         if (isInConstruction) {
           const comingSoonImg = document.createElement('img');
-          comingSoonImg.src = 'coming-soon.svg';
+          comingSoonImg.src = 'https://rcrdme-gnmr.netlify.app/homepage/coming-soon.svg';
           comingSoonImg.style.position = 'absolute';
           comingSoonImg.style.top = '32px';
           comingSoonImg.style.right = window.innerWidth <= 428 ? "16px" : "32px";
