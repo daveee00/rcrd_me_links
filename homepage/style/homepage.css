@@ -1,4 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+@font-face {
+  font-family: 'Rajdhani';
+  src: url('https://rcrdme-gnmr.netlify.app/homepage/Rajdhani-SemiBold.ttf') format(truetype);
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
 
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
@@ -3257,7 +3263,6 @@ letter-spacing: 2px;
 color: white;
 font-size: 5rem;
 font-family: "Rajdhani", sans-serif;
-font-weight: 600;
 opacity: .5;
 transition: opacity 0.3s ease-in-out;
 letter-spacing: 2px;
