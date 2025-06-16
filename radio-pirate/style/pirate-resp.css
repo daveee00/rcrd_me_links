@@ -806,7 +806,7 @@
   }*/
 
   .track-title .arrow {
-    visibility: visibile;
+    visibility: visibile !important;
   }
   /*
   .track-title:hover .arrow {
