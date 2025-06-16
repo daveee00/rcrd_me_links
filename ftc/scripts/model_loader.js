@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Model loader
   const loader = new THREE.GLTFLoader();
   loader.load(
-    "https://rcrdme-gnmr.netlify.app/blender-exp/disco1994clubmix.glb",
+    "https://rcrdme-gnmr.netlify.app/blender-exp/ftc-disco-2.glb",
     function (gltf) {
       model = gltf.scene;
       model.scale.set(6, 6, 6);
