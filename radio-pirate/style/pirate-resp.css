@@ -462,7 +462,7 @@
     font-family: "IBM Plex Mono", monospace;
     font-size: 1rem !important;
     position: absolute;
-    bottom: 10vh;
+    bottom: 10vh !important;
     margin: 0;
   }
 
