@@ -1043,7 +1043,7 @@
         videoBg.style.top = "0";
         videoBg.style.left = "0";
         videoBg.style.width = "100%";
-        videoBg.style.height = window.innerWidth <= 428 ? "96vh" : "100vh";
+        videoBg.style.height = window.innerWidth <= 428 ? "100vh" : "100vh";
         videoBg.style.zIndex = "4";
         videoBg.style.overflow = "hidden";
         videoBg.style.pointerEvents = "none";
