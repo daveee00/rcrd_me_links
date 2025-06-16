@@ -92,7 +92,7 @@ body {
   height: 100%;
   object-fit: cover; /* taglia immagine per riempire il box */
   display: block;
-  opacity: 0;
+  opacity: 1 !important;
   transition: opacity 0.4s;
 }
 
