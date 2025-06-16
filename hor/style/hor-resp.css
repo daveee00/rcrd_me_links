@@ -543,6 +543,7 @@
     height: 30vh;
     display: flex;
     align-items: center;
+      width: 100%;
   }
   .c-sx {
     flex-direction: column;
