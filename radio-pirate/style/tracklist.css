@@ -64,6 +64,7 @@
   flex-direction: column;
   align-items: start;
   justify-content: left;
+  margin-bottom: 12px;
 }
 
 .side-name {
