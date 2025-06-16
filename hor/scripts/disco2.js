@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
   // Model loader
   const loader = new THREE.GLTFLoader();
   loader.load(
-    "https://rcrdme-gnmr.netlify.app/blender-exp/hor-disco1.glb", // <-- update this path if needed
+    "https://rcrdme-gnmr.netlify.app/blender-exp/hor-disco2.glb", // <-- update this path if needed
     function (gltf) {
       model = gltf.scene;
       model.scale.set(11, 11, 11);
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const intersects = raycaster.intersectObject(model, true);
 
         if (intersects.length > 0) {
-          window.open('#', '_blank');
+          window.open('https://www.youtube.com/watch?v=z2cAMvYLZKE', '_blank');
         }
       }
 
