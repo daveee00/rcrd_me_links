@@ -324,7 +324,7 @@
     line-height: 1;
     padding-left: 0px !important;
     width: 100%;
-    text-align: center;
+    text-align: left;
     height: fit-content;
   }
   #tracklist-artist {
