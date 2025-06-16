@@ -158,7 +158,7 @@ footer {
     height: fit-content;
     display: flex;
     position: fixed;
-    top: 70%;
+    top: 65% !important;
     right: 0;
   
   }
@@ -398,7 +398,7 @@ footer {
   }
   .header-rp {
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
