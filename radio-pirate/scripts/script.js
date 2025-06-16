@@ -87,7 +87,7 @@ if (wideImage) {
 }
 
 // Typewriter for text-box
-const textBoxText = `Teknobirrette non è stato solo un festival: è stato un momento di condivisione pura, di sorrisi, bassi profondi e occhi che brillavano sotto le luci del palco. Ogni set, ogni incontro, ogni abbraccio ha contribuito a creare un’energia irripetibile. Padova quella notte ha ballato con il cuore.`;
+const textBoxText = `Dopo una settimana di vacanza meravigliosa ad Evian e con una pace estrema in corpo, ho preso un treno da Ginevra e ho fatto un viaggio stupendo che mi ha portato direttamente al centro di Parigi. Suonare una domenica di fine agosto a sfioro sulla Senna, davanti a un bellissimo dancefloor, dopo una settimana di stop è stato per me un momento di relax fotonico.`;
 
 function animateTextBox() {
   const textContainer = document.querySelector('.typewriter-text-box');
