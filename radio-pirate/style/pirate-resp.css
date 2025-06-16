@@ -803,10 +803,14 @@
   .track-title .arrow {
     visibility: hidden;
   }
-  
+
+  .track-title .arrow {
+    visibility: visibile;
+  }
+  /*
   .track-title:hover .arrow {
     visibility: visible;
-  }
+  }*/
   
   .track-title:hover {
     cursor: pointer;
