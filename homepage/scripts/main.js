@@ -18,7 +18,7 @@
   function initWebflowViewer() {
     // Force scroll to top immediately when the page loads
     window.scrollTo(0, 0);
-    
+
     let camera, scene, renderer;
     let container, clock;
     let lastScrollY = 0; // Reset lastScrollY to 0
@@ -38,7 +38,7 @@
       modelZ: -6,
       hoverScale: 8,
       selectedScale: 15,
-      rotationSpeed: 0.5
+      rotationSpeed: 0.5,
     };
     const desktopParams = {
       cameraFOV: 35,
@@ -48,13 +48,13 @@
       modelZ: -8,
       hoverScale: 11,
       selectedScale: 20,
-      rotationSpeed: 0.5
+      rotationSpeed: 0.5,
     };
     const params = isMobile ? mobileParams : desktopParams;
 
     // Reset any existing scroll position
     if (window.history && window.history.scrollRestoration) {
-      window.history.scrollRestoration = 'manual';
+      window.history.scrollRestoration = "manual";
     }
 
     // Ensure we're at the top
@@ -94,22 +94,6 @@
       "https://wddc-slipknot.webflow.io/performances/tekno-birrette",
     ];
 
-    //page performance css
-    const pageStyles = [
-      "https://cdn.jsdelivr.net/gh/daveee00/scripts-for-the-cause-test/ftc.css",
-      "https://cdn.jsdelivr.net/gh/daveee00/scripts-for-the-cause-test/ftc.css",
-      "https://cdn.jsdelivr.net/gh/daveee00/scripts-for-the-cause-test/ftc.css",
-      "https://cdn.jsdelivr.net/gh/daveee00/scripts-for-the-cause-test/ftc.css",
-      "https://cdn.jsdelivr.net/gh/daveee00/scripts-for-the-cause-test/ftc.css",
-      "https://cdn.jsdelivr.net/gh/daveee00/scripts-for-the-cause-test/ftc.css",
-      "https://cdn.jsdelivr.net/gh/daveee00/scripts-for-the-cause-test/ftc.css",
-      "https://cdn.jsdelivr.net/gh/daveee00/scripts-for-the-cause-test/ftc.css",
-      "https://cdn.jsdelivr.net/gh/daveee00/scripts-for-the-cause-test/ftc.css",
-      "https://cdn.jsdelivr.net/gh/daveee00/scripts-for-the-cause-test/ftc.css",
-      "https://cdn.jsdelivr.net/gh/daveee00/scripts-for-the-cause-test/ftc.css",
-      "https://cdn.jsdelivr.net/gh/daveee00/scripts-for-the-cause-test/ftc.css",
-    ];
-
     // backgrounds for active page
     const vinylBackground = [
       "linear-gradient(270deg, #EEDC9A, #F5EEC0, #D6BB7D)",
@@ -126,7 +110,7 @@
       "linear-gradient(270deg, #0C82A1, #3fc8f2, #00475a)",
     ];
 
-    //titoli-performance 
+    //titoli-performance
 
     const title_performance = [
       "CLUB DER VISIONERE",
@@ -141,7 +125,7 @@
       "RADIO PIRATE",
       "TELLER",
       "TECKNO BIRRETTE",
-    ]
+    ];
 
     const data_luogo = [
       "00.00.2020, Berlino",
@@ -164,23 +148,23 @@
       "https://rcrdme-gnmr.netlify.app/blender-exp/teller.glb",
       "https://rcrdme-gnmr.netlify.app/blender-exp/thelotradio.glb",
       "https://rcrdme-gnmr.netlify.app/blender-exp/haudio.glb",
+      "https://rcrdme-gnmr.netlify.app/blender-exp/vena.glb",
     ];
 
     const videoBG = [
-      "https://rcrdme-gnmr.netlify.app/homepage/videobg-darker-grey.mp4",
-      "https://rcrdme-gnmr.netlify.app/homepage/elsewhere.mp4",
-      "https://rcrdme-gnmr.netlify.app/homepage/videovena.mp4",
-      "https://rcrdme-gnmr.netlify.app/homepage/videofdc.mp4",
-      "https://rcrdme-gnmr.netlify.app/homepage/videobg-darker-grey.mp4",
-      "https://rcrdme-gnmr.netlify.app/homepage/videobg-darker-grey.mp4",
-      "https://rcrdme-gnmr.netlify.app/homepage/videohor.mp4",
-      "https://rcrdme-gnmr.netlify.app/homepage/videobg-darker-grey.mp4",
-      "https://rcrdme-gnmr.netlify.app/homepage/videobg-darker-grey.mp4",
-      "https://rcrdme-gnmr.netlify.app/homepage/videoradiopirate.mp4",
-      "https://rcrdme-gnmr.netlify.app/homepage/videobg-darker-grey.mp4",
-      "https://rcrdme-gnmr.netlify.app/homepage/teknobirrette.mp4",
+      "https://rcrdme-gnmr.netlify.app/homepage/videobg-dark-grey.mp4",
+      "https://rcrdme-gnmr.netlify.app/backgrounds/elsewhere.mp4",
+      "https://rcrdme-gnmr.netlify.app/homepage/videobg-dark-grey.mp4",
+      "https://rcrdme-gnmr.netlify.app/backgrounds/ftc.mp4",
+      "https://rcrdme-gnmr.netlify.app/homepage/videobg-dark-grey.mp4",
+      "https://rcrdme-gnmr.netlify.app/homepage/videobg-dark-grey.mp4",
+      "https://rcrdme-gnmr.netlify.app/backgrounds/hor.mp4",
+      "https://rcrdme-gnmr.netlify.app/homepage/videobg-dark-grey.mp4",
+      "https://rcrdme-gnmr.netlify.app/homepage/videobg-dark-grey.mp4",
+      "https://rcrdme-gnmr.netlify.app/backgrounds/pirate.mp4",
+      "https://rcrdme-gnmr.netlify.app/homepage/videobg-dark-grey.mp4",
+      "https://rcrdme-gnmr.netlify.app/backgrounds/tekno.mp4",
     ];
-
 
     // Add raycaster for click detection
     const raycaster = new THREE.Raycaster();
@@ -207,13 +191,19 @@
           path,
           (gltf) => {
             const model = gltf.scene;
-            model.scale.set(params.modelScale, params.modelScale, params.modelScale);
+            model.scale.set(
+              params.modelScale,
+              params.modelScale,
+              params.modelScale
+            );
             const baseY = -index * params.modelSpacing;
             model.position.set(0, baseY, params.modelZ);
             model.userData.baseY = baseY;
             model.userData.offset = index * 0.3;
             model.userData.originalIndex = index;
-            model.userData.modelName = `Model ${index + 1} (${path.split("/").pop()})`;
+            model.userData.modelName = `Model ${index + 1} (${path
+              .split("/")
+              .pop()})`;
             model.rotation.set(
               THREE.MathUtils.degToRad(0),
               THREE.MathUtils.degToRad(180),
@@ -324,10 +314,11 @@
       pageActive.style.height = window.innerWidth <= 428 ? "96vh" : "100vh";
       pageActive.style.zIndex = "11";
       pageActive.style.background = "none";
-      pageActive.style.pointerEvents = 'none';
+      pageActive.style.pointerEvents = "none";
       const closeBtn = document.createElement("button");
       const closeIcon = document.createElement("img");
-      closeIcon.src = "https://cdn.jsdelivr.net/gh/daveee00/export_blender/close-button.svg";
+      closeIcon.src =
+        "https://cdn.jsdelivr.net/gh/daveee00/export_blender/close-button.svg";
       closeIcon.style.width = "24px";
       closeIcon.style.height = "24px";
       closeBtn.appendChild(closeIcon);
@@ -341,7 +332,7 @@
       closeBtn.style.padding = "32px";
       closeBtn.style.opacity = "0.5";
       closeBtn.style.transition = "opacity 300ms ease-out";
-      closeBtn.style.pointerEvents = 'auto';
+      closeBtn.style.pointerEvents = "auto";
       closeBtn.style.zIndex = "12";
       closeBtn.addEventListener("mouseover", () => {
         closeBtn.style.opacity = "1";
@@ -451,37 +442,46 @@
     //–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 
     function handleClose() {
-      console.log('handleClose triggered');
-      
-      // Force cleanup of all elements
+      console.log("handleClose triggered");
+
+      // Fade out video background before removing
+      const videoBg = document.getElementById("videoBg");
+      if (videoBg) {
+        videoBg.style.opacity = "0";
+        // Wait for fade out to complete before removing
+        setTimeout(() => {
+          videoBg.remove();
+        }, 800); // Match the transition duration
+      }
+
       const elementsToRemove = [
         document.getElementById("page-active"),
         document.getElementById("model-background"),
         document.getElementById("modelSelected"),
-        document.getElementById("close")
+        document.getElementById("close"),
       ];
-      
-      elementsToRemove.forEach(element => {
+
+      elementsToRemove.forEach((element) => {
         if (element) {
-          console.log('Removing element:', element.id);
+          console.log("Removing element:", element.id);
           element.remove();
         }
       });
 
       isModelClicked = false;
-      console.log('isModelClicked set to false');
+      console.log("isModelClicked set to false");
 
       // Show elements with class 'to-hide'
-      const elementsToHide = document.querySelectorAll('.to-hide');
-      elementsToHide.forEach(element => {
-        element.style.display = '';
+      const elementsToHide = document.querySelectorAll(".to-hide");
+      elementsToHide.forEach((element) => {
+        element.style.display = "";
       });
 
       // Restore UI elements visibility
-      const uiElements = document.querySelectorAll('.ui-elements');
-      uiElements.forEach(element => {
-        element.style.opacity = '1';
-        element.style.pointerEvents = 'auto';
+      const uiElements = document.querySelectorAll(".ui-elements");
+      uiElements.forEach((element) => {
+        element.style.opacity = "1";
+        element.style.pointerEvents = "auto";
       });
 
       // Enable scrolling
@@ -490,9 +490,9 @@
       // Show the main canvas again and ensure it's properly set up
       const mainCanvas = document.getElementById("threejs-container");
       if (mainCanvas) {
-        console.log('Restoring main canvas visibility');
+        console.log("Restoring main canvas visibility");
         mainCanvas.style.display = "block";
-        
+
         // Ensure renderer is properly set up
         if (renderer && renderer.domElement) {
           // Remove any existing click listeners
@@ -531,7 +531,7 @@
 
       // Reset hoveredModel
       hoveredModel = null;
-      console.log('handleClose completed');
+      console.log("handleClose completed");
     }
 
     //–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
@@ -539,7 +539,7 @@
     function init() {
       // Force scroll to top again during initialization
       window.scrollTo(0, 0);
-      
+
       if (!document.getElementById("threejs-container")) {
         container = document.createElement("div");
         container.id = "threejs-container";
@@ -556,7 +556,12 @@
 
       const width = container.clientWidth;
       const height = container.clientHeight;
-      camera = new THREE.PerspectiveCamera(params.cameraFOV, width / height, 0.25, 200);
+      camera = new THREE.PerspectiveCamera(
+        params.cameraFOV,
+        width / height,
+        0.25,
+        200
+      );
       camera.position.set(0, 0, params.cameraZ);
       camera.lookAt(0, 0, 0);
       scene = new THREE.Scene();
@@ -585,7 +590,7 @@
       window.mainCamera = camera;
       window.mainRenderer = renderer;
       window.mainClock = clock;
-      
+
       // Remove any existing event listeners
       window.removeEventListener("resize", onWindowResize);
       window.removeEventListener("scroll", handleScroll);
@@ -593,15 +598,15 @@
         renderer.domElement.removeEventListener("click", onModelClick);
       }
       window.removeEventListener("mousemove", onMouseMove);
-      
+
       // Add event listeners
       window.addEventListener("resize", onWindowResize);
       window.addEventListener("scroll", handleScroll);
       renderer.domElement.addEventListener("click", onModelClick);
       window.addEventListener("mousemove", onMouseMove);
-      
+
       checkContainerPosition();
-      console.log('Initialization complete');
+      console.log("Initialization complete");
     }
 
     //–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
@@ -614,7 +619,10 @@
       }
 
       // Log the model name
-      console.log("Model loaded in selected canvas:", clickedModel.userData.modelName);
+      console.log(
+        "Model loaded in selected canvas:",
+        clickedModel.userData.modelName
+      );
 
       // Create modelSelected container
       const modelSelected = document.createElement("div");
@@ -632,7 +640,9 @@
       modelSelected.style.justifyContent = "center";
 
       // Add grey gradient background if model is in construction
-      const isInConstruction = in_construction.includes(modelsToLoad[clickedModel.userData.originalIndex]);
+      const isInConstruction = in_construction.includes(
+        modelsToLoad[clickedModel.userData.originalIndex]
+      );
       if (isInConstruction) {
         modelSelected.style.background = "";
       }
@@ -645,7 +655,12 @@
 
       // Create new scene, camera, and renderer for the selected model
       const selectedScene = new THREE.Scene();
-      const selectedCamera = new THREE.PerspectiveCamera(params.cameraFOV, window.innerWidth / window.innerHeight, 0.25, 200);
+      const selectedCamera = new THREE.PerspectiveCamera(
+        params.cameraFOV,
+        window.innerWidth / window.innerHeight,
+        0.25,
+        200
+      );
       selectedCamera.position.set(0, 0, params.cameraZ);
       selectedCamera.lookAt(0, 0, 0);
 
@@ -658,7 +673,10 @@
       selectedScene.add(dirLight);
 
       // Create new renderer
-      const selectedRenderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true });
+      const selectedRenderer = new THREE.WebGLRenderer({
+        canvas: canvas,
+        alpha: true,
+      });
       selectedRenderer.setPixelRatio(window.devicePixelRatio);
       selectedRenderer.setSize(window.innerWidth, window.innerHeight);
       selectedRenderer.outputEncoding = THREE.sRGBEncoding;
@@ -675,16 +693,20 @@
         modelsToLoad[clickedModel.userData.originalIndex],
         (gltf) => {
           const modelClone = gltf.scene;
-          modelClone.scale.set(params.modelScale, params.modelScale, params.modelScale);
+          modelClone.scale.set(
+            params.modelScale,
+            params.modelScale,
+            params.modelScale
+          );
           modelClone.position.set(0, isMobile ? 0.5 : 1, params.modelZ);
-          
+
           // Set initial rotation to match the main scene
           modelClone.rotation.set(
             THREE.MathUtils.degToRad(0),
             THREE.MathUtils.degToRad(180),
             THREE.MathUtils.degToRad(0)
           );
-          
+
           selectedScene.add(modelClone);
           window.selectedModel = modelClone;
 
@@ -713,7 +735,7 @@
                 }
               }
               rotateModel();
-            }
+            },
           });
         },
         undefined,
@@ -745,29 +767,29 @@
     //–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 
     function onModelClick(event) {
-      console.log('onModelClick triggered');
-      
+      console.log("onModelClick triggered");
+
       // If a model is already clicked, don't process new clicks
       if (isModelClicked) {
-        console.log('Model already clicked, ignoring new click');
+        console.log("Model already clicked, ignoring new click");
         return;
       }
-      
+
       const rect = renderer.domElement.getBoundingClientRect();
       mouse.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
       mouse.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
       raycaster.setFromCamera(mouse, camera);
       const intersects = raycaster.intersectObjects(loadedModels, true);
-      
-      console.log('Intersects found:', intersects.length);
-      
+
+      console.log("Intersects found:", intersects.length);
+
       if (intersects.length > 0) {
-        console.log('Model intersection detected');
-        
+        console.log("Model intersection detected");
+
         // Hide elements with class 'to-hide'
-        const elementsToHide = document.querySelectorAll('.to-hide');
-        elementsToHide.forEach(element => {
-          element.style.display = 'none';
+        const elementsToHide = document.querySelectorAll(".to-hide");
+        elementsToHide.forEach((element) => {
+          element.style.display = "none";
         });
 
         isModelClicked = true;
@@ -775,67 +797,74 @@
         while (clickedModel.parent && !loadedModels.includes(clickedModel)) {
           clickedModel = clickedModel.parent;
         }
-        console.log('Clicked model:', clickedModel.userData.modelName);
-        
+        console.log("Clicked model:", clickedModel.userData.modelName);
+
         const clickedIndex = clickedModel.userData.originalIndex;
-        const isInConstruction = in_construction.includes(modelsToLoad[clickedIndex]);
+        const isInConstruction = in_construction.includes(
+          modelsToLoad[clickedIndex]
+        );
 
         // Store model states before any transformations
         storeModelStates();
 
         // Create and add the model background elements
-        const modelBackground = document.createElement('div');
-        modelBackground.id = 'model-background';
-        modelBackground.style.width = '100%';
-        modelBackground.style.height = window.innerWidth <= 428 ? "96vh" : '100vh';
-        modelBackground.style.position = 'fixed';
-        modelBackground.style.top = '0';
-        modelBackground.style.left = '0';
-        modelBackground.style.zIndex = '10';
-        modelBackground.style.display = 'flex';
-        modelBackground.style.flexDirection = 'row';
-        modelBackground.style.justifyContent = 'end';
-        modelBackground.style.alignItems = 'end';
-        modelBackground.style.pointerEvents = 'none';
+        const modelBackground = document.createElement("div");
+        modelBackground.id = "model-background";
+        modelBackground.style.width = "100%";
+        modelBackground.style.height =
+          window.innerWidth <= 428 ? "96vh" : "100vh";
+        modelBackground.style.position = "fixed";
+        modelBackground.style.top = "0";
+        modelBackground.style.left = "0";
+        modelBackground.style.zIndex = "10";
+        modelBackground.style.display = "flex";
+        modelBackground.style.flexDirection = "row";
+        modelBackground.style.justifyContent = "end";
+        modelBackground.style.alignItems = "end";
+        modelBackground.style.pointerEvents = "none";
 
         // Create performance specifics section
-        const performanceSpecifics = document.createElement('div');
-        performanceSpecifics.id = 'performance-specifics';
-        performanceSpecifics.style.width = '100%';
-        performanceSpecifics.style.height = '10vh';
-        performanceSpecifics.style.display = 'flex';
-        performanceSpecifics.style.flexDirection = 'column';
-        performanceSpecifics.style.justifyContent = 'space-evenly';
+        const performanceSpecifics = document.createElement("div");
+        performanceSpecifics.id = "performance-specifics";
+        performanceSpecifics.style.width = "100%";
+        performanceSpecifics.style.height = "10vh";
+        performanceSpecifics.style.display = "flex";
+        performanceSpecifics.style.flexDirection = "column";
+        performanceSpecifics.style.justifyContent = "space-evenly";
         performanceSpecifics.style.marginLeft =
-          window.innerWidth <= 428 ? "16px" : '32px';
-        performanceSpecifics.style.marginBottom = '64px';
-        performanceSpecifics.style.position = 'relative';
-        performanceSpecifics.style.pointerEvents = 'none';
+          window.innerWidth <= 428 ? "16px" : "32px";
+        performanceSpecifics.style.marginBottom = "64px";
+        performanceSpecifics.style.position = "relative";
+        performanceSpecifics.style.pointerEvents = "none";
 
         // Create and set title
-        const performanceTitle = document.createElement('h2');
-        performanceTitle.id = 'performance-title';
-        performanceTitle.style.color = 'white';
-        performanceTitle.style.margin = '0px';
-        performanceTitle.style.padding = '0px';
-        performanceTitle.style.fontSize = window.innerWidth <= 428 ? '2em' : '3em';
-        performanceTitle.style.opacity = '0.6';
+        const performanceTitle = document.createElement("h2");
+        performanceTitle.id = "performance-title";
+        performanceTitle.style.color = "white";
+        performanceTitle.style.margin = "0px";
+        performanceTitle.style.padding = "0px";
+        performanceTitle.style.fontSize =
+          window.innerWidth <= 428 ? "2em" : "3em";
+        performanceTitle.style.opacity = "0.6";
         performanceTitle.textContent = title_performance[clickedIndex];
 
         // Create and set date
-        const datePerformance = document.createElement('p');
-        datePerformance.id = 'date-performance';
-        datePerformance.style.color = 'white';
-        datePerformance.style.margin = '0px';
-        datePerformance.style.padding = '0px';
-        datePerformance.style.fontSize = window.innerWidth <= 428 ? '1em' : '1.5em';
-        datePerformance.style.fontFamily = 'monospace';
+        const datePerformance = document.createElement("p");
+        datePerformance.id = "date-performance";
+        datePerformance.style.color = "white";
+        datePerformance.style.margin = "0px";
+        datePerformance.style.padding = "0px";
+        datePerformance.style.fontSize =
+          window.innerWidth <= 428 ? "1em" : "1.5em";
+        datePerformance.style.fontFamily = "monospace";
         datePerformance.textContent = data_luogo[clickedIndex];
 
         // Add window resize listener to update font sizes
-        window.addEventListener('resize', () => {
-            performanceTitle.style.fontSize = window.innerWidth <= 428 ? '2em' : '3em';
-            datePerformance.style.fontSize = window.innerWidth <= 428 ? '1em' : '1.5em';
+        window.addEventListener("resize", () => {
+          performanceTitle.style.fontSize =
+            window.innerWidth <= 428 ? "2em" : "3em";
+          datePerformance.style.fontSize =
+            window.innerWidth <= 428 ? "1em" : "1.5em";
         });
 
         // Add title and date to performance specifics
@@ -847,47 +876,47 @@
 
         // Only add play button if not in construction
         if (!isInConstruction) {
-          const playButton = document.createElement('button');
-          playButton.id = 'play-button';
+          const playButton = document.createElement("button");
+          playButton.id = "play-button";
           playButton.style.height = window.innerWidth <= 428 ? "8vh" : "8vh";
           playButton.style.aspectRatio =
-            window.innerWidth <= 428 ? "4/3" : '16/9';
-          playButton.style.cursor = 'pointer';
-          playButton.style.background = 'none';
-          playButton.style.border = '4px solid white';
-          playButton.style.borderRadius = '200px';
-          playButton.style.color = 'white';
-          playButton.style.textTransform = 'uppercase';
-          playButton.style.position = 'relative';
-          playButton.style.marginBottom = '64px';
+            window.innerWidth <= 428 ? "4/3" : "16/9";
+          playButton.style.cursor = "pointer";
+          playButton.style.background = "none";
+          playButton.style.border = "4px solid white";
+          playButton.style.borderRadius = "200px";
+          playButton.style.color = "white";
+          playButton.style.textTransform = "uppercase";
+          playButton.style.position = "relative";
+          playButton.style.marginBottom = "64px";
           playButton.style.marginRight =
-            window.innerWidth <= 428 ? "16px" : '32px';
-          playButton.style.fontSize = '1.5em';
-          playButton.style.transition = '400ms ease-out';
-          playButton.style.pointerEvents = 'auto';
-          playButton.textContent = 'play';
+            window.innerWidth <= 428 ? "16px" : "32px";
+          playButton.style.fontSize = "1.5em";
+          playButton.style.transition = "400ms ease-out";
+          playButton.style.pointerEvents = "auto";
+          playButton.textContent = "play";
 
           // Add hover effect
-          playButton.addEventListener('mouseover', () => {
-            playButton.style.background = 'rgba(255, 255, 255, .5)';
+          playButton.addEventListener("mouseover", () => {
+            playButton.style.background = "rgba(255, 255, 255, .5)";
           });
-          playButton.addEventListener('mouseout', () => {
-            playButton.style.background = 'none';
+          playButton.addEventListener("mouseout", () => {
+            playButton.style.background = "none";
           });
 
           // Add click event to navigate to the corresponding page
-          playButton.addEventListener('click', () => {
+          playButton.addEventListener("click", () => {
             const targetUrl = pageLinks[clickedIndex];
-            
+
             if (window.selectedModel) {
               // Stop the continuous rotation
               window.selectedModel.rotation.y = window.selectedModel.rotation.y;
-              
+
               // Create a timeline for sequenced animations
               const tl = gsap.timeline({
                 onComplete: () => {
-                  window.open(targetUrl, '_self');
-                }
+                  window.open(targetUrl, "_self");
+                },
               });
 
               // First animate the rotation
@@ -896,28 +925,32 @@
                 y: THREE.MathUtils.degToRad(180),
                 z: THREE.MathUtils.degToRad(90),
                 duration: 3.5,
-                ease: "power2.inOut"
+                ease: "power2.inOut",
               })
-              // Then animate the position, starting earlier for smoother transition
-              .to(window.selectedModel.position, {
-                y: -200,
-                duration: 3.5,
-                ease: "power1.inOut",
-                onUpdate: () => {
-                  // Check if model is about to leave the viewport
-                  const modelPosition = window.selectedModel.position.y;
-                  const viewportHeight = window.innerHeight;
-                  const modelHeight = window.selectedModel.scale.y * 2; // Approximate model height
-                  const modelBottom = modelPosition + modelHeight/2;
-                  
-                  // If model is about to leave the viewport (just 10% remaining visible)
-                  if (modelBottom < -viewportHeight * 0.1) {
-                    window.open(targetUrl, '_self');
-                  }
-                }
-              }, "-=1.2"); // Start 1.2 seconds before the previous animation ends
+                // Then animate the position, starting earlier for smoother transition
+                .to(
+                  window.selectedModel.position,
+                  {
+                    y: -200,
+                    duration: 3.5,
+                    ease: "power1.inOut",
+                    onUpdate: () => {
+                      // Check if model is about to leave the viewport
+                      const modelPosition = window.selectedModel.position.y;
+                      const viewportHeight = window.innerHeight;
+                      const modelHeight = window.selectedModel.scale.y * 2; // Approximate model height
+                      const modelBottom = modelPosition + modelHeight / 2;
+
+                      // If model is about to leave the viewport (just 10% remaining visible)
+                      if (modelBottom < -viewportHeight * 0.1) {
+                        window.open(targetUrl, "_self");
+                      }
+                    },
+                  },
+                  "-=1.2"
+                ); // Start 1.2 seconds before the previous animation ends
             } else {
-              window.open(targetUrl, '_self');
+              window.open(targetUrl, "_self");
             }
           });
 
@@ -929,13 +962,15 @@
 
         // Add coming soon image if model is in construction
         if (isInConstruction) {
-          const comingSoonImg = document.createElement('img');
-          comingSoonImg.src = 'https://rcrdme-gnmr.netlify.app/homepage/coming-soon.svg';
-          comingSoonImg.style.position = 'absolute';
-          comingSoonImg.style.top = '32px';
-          comingSoonImg.style.right = window.innerWidth <= 428 ? "16px" : "32px";
+          const comingSoonImg = document.createElement("img");
+          comingSoonImg.src =
+            "https://rcrdme-gnmr.netlify.app/homepage/coming-soon.svg";
+          comingSoonImg.style.position = "absolute";
+          comingSoonImg.style.top = "32px";
+          comingSoonImg.style.right =
+            window.innerWidth <= 428 ? "16px" : "32px";
           comingSoonImg.style.height = window.innerWidth <= 428 ? "40%" : "50%";
-          comingSoonImg.style.opacity = ".5"
+          comingSoonImg.style.opacity = ".5";
           modelBackground.appendChild(comingSoonImg);
         }
 
@@ -949,10 +984,11 @@
         pageActive.style.height = "100vh";
         pageActive.style.zIndex = "11";
         pageActive.style.background = "none";
-        pageActive.style.pointerEvents = 'none';
+        pageActive.style.pointerEvents = "none";
         const closeBtn = document.createElement("button");
         const closeIcon = document.createElement("img");
-        closeIcon.src = "https://cdn.jsdelivr.net/gh/daveee00/export_blender/close-button.svg";
+        closeIcon.src =
+          "https://cdn.jsdelivr.net/gh/daveee00/export_blender/close-button.svg";
         closeIcon.style.width = "24px";
         closeIcon.style.height = "24px";
         closeBtn.appendChild(closeIcon);
@@ -963,10 +999,11 @@
         closeBtn.style.background = "none";
         closeBtn.style.border = "none";
         closeBtn.style.cursor = "pointer";
-        closeBtn.style.padding = window.innerWidth <= 428 ? "32px 16px" : "32px";
+        closeBtn.style.padding =
+          window.innerWidth <= 428 ? "32px 16px" : "32px";
         closeBtn.style.opacity = "0.5";
         closeBtn.style.transition = "opacity 300ms ease-out";
-        closeBtn.style.pointerEvents = 'auto';
+        closeBtn.style.pointerEvents = "auto";
         closeBtn.style.zIndex = "12";
         closeBtn.addEventListener("mouseover", () => {
           closeBtn.style.opacity = "1";
@@ -979,10 +1016,10 @@
         document.body.appendChild(pageActive);
 
         // Hide UI elements
-        const uiElements = document.querySelectorAll('.ui-elements');
-        uiElements.forEach(element => {
-          element.style.opacity = '0';
-          element.style.pointerEvents = 'none';
+        const uiElements = document.querySelectorAll(".ui-elements");
+        uiElements.forEach((element) => {
+          element.style.opacity = "0";
+          element.style.pointerEvents = "none";
         });
 
         // Disable scrolling
@@ -998,7 +1035,46 @@
 
         // Create the modelSelected canvas
         createModelSelectedCanvas(clickedModel);
-        
+
+        // Create video background
+        const videoBg = document.createElement("div");
+        videoBg.id = "videoBg";
+        videoBg.style.position = "fixed";
+        videoBg.style.top = "0";
+        videoBg.style.left = "0";
+        videoBg.style.width = "100%";
+        videoBg.style.height = window.innerWidth <= 428 ? "96vh" : "100vh";
+        videoBg.style.zIndex = "4";
+        videoBg.style.overflow = "hidden";
+        videoBg.style.pointerEvents = "none";
+        videoBg.style.opacity = "0"; // Start with opacity 0
+        videoBg.style.transition = "opacity 0.8s ease-in-out"; // Add transition
+
+        // Create and add video element
+        const video = document.createElement("video");
+        video.src = videoBG[clickedIndex];
+        video.style.width = "100%";
+        video.style.height = "100%";
+        video.style.objectFit = "cover";
+        video.autoplay = true;
+        video.loop = true;
+        video.muted = true;
+        video.playsInline = true;
+        video.style.transition = "opacity 0.8s ease-in-out"; // Add transition
+
+        videoBg.appendChild(video);
+        document.body.appendChild(videoBg);
+
+        // Start playing the video and fade in
+        video.play().then(() => {
+            // Fade in the video background
+            requestAnimationFrame(() => {
+                videoBg.style.opacity = "1";
+            });
+        }).catch(error => {
+            console.error("Error playing video:", error);
+        });
+
         gsap.to(clickedModel.position, {
           x: 0,
           y: 0,
@@ -1015,7 +1091,14 @@
         });
         loadedModels.forEach((model, index) => {
           if (index !== clickedIndex) {
-            const yOffset = index < clickedIndex ? (isMobile ? 50 : 100) : (isMobile ? -50 : -100);
+            const yOffset =
+              index < clickedIndex
+                ? isMobile
+                  ? 50
+                  : 100
+                : isMobile
+                ? -50
+                : -100;
             gsap.to(model.position, {
               x: 0,
               y: yOffset,
@@ -1030,7 +1113,6 @@
 
     //–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 
-    
     function onMouseMove(event) {
       const rect = renderer.domElement.getBoundingClientRect();
       mouse.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
@@ -1076,4 +1158,3 @@
   // Start the viewer when the page loads
   window.addEventListener("load", initWebflowViewer);
 })();
-
