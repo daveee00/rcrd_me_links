@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const intersects = raycaster.intersectObject(model, true);
 
         if (intersects.length > 0) {
-          window.open('#', '_blank');
+          window.open('https://www.youtube.com/watch?v=B-h41ZoRSTg', '_blank');
         }
       }
 
