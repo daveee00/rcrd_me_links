@@ -163,7 +163,7 @@
     height: fit-content;
     display: flex;
     position: fixed;
-    top: 73% !important;
+        top: 65% !important;
     right: 0;
   }
 
@@ -391,7 +391,7 @@
   /*=============================header.css=====================================*/
   .shade {
     width: 100vw;
-    height: 100vh;
+    height: 90vh;
     position: fixed;
     top: 0;
     left: 0;
