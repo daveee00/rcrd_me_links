@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
   // Model loader
   const loader = new THREE.GLTFLoader();
   loader.load(
-    "https://cdn.jsdelivr.net/gh/daveee00/export_blender/ghost-endovena.glb", // <-- update this path if needed
+    "https://cdn.jsdelivr.net/gh/daveee00/export_blender/hor-disco3.glb", // <-- update this path if needed
     function (gltf) {
       model = gltf.scene;
       model.scale.set(11, 11, 11);
