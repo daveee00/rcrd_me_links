@@ -1,4 +1,4 @@
-ldocument.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
   // Ensure Three.js is loaded
   if (!window.THREE) {
     console.error("Three.js is not loaded");
