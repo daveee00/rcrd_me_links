@@ -85,6 +85,37 @@ const audioControlStyles = `
   80% { transform: rotate(380deg); }
   100% { transform: rotate(360deg); }
 }
+@media screen and (max-width: 768px) {
+.audio-control {
+  position: fixed;
+  top: 8%;
+  right: 16px !important;
+  z-index: 2100;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-direction: row;
+  pointer-events: auto;
+}
+
+.audio-control .audio-text {
+  color: #fff;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 1rem;
+  margin-left: 0;
+  margin-right: 8px;
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+  opacity: 1;
+  border-radius: 6px;
+  padding: 6px 14px;
+  transition: opacity 0.3s, visibility 0.3s;
+  position: relative;
+  z-index: 1;
+  display: none;
+}
+
+}
 `;
 
 if (!document.getElementById('audio-control-style')) {
