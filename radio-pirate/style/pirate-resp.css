@@ -391,7 +391,7 @@
   /*=============================header.css=====================================*/
   .shade {
     width: 100vw;
-    height: 90vh;
+    height: 90vh !important;
     position: fixed;
     top: 0;
     left: 0;
