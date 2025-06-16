@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+ldocument.addEventListener("DOMContentLoaded", function () {
   // Ensure Three.js is loaded
   if (!window.THREE) {
     console.error("Three.js is not loaded");
@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Add click event listener to navigate
   container.addEventListener("click", function() {
-    window.location.href = "https://wddc-slipknot.webflow.io/performances/elsewhere";
+    window.location.href = "https://wddc-slipknot.webflow.io/performances/elsewhere-seoul";
   });
 
   let clock = new THREE.Clock();
