@@ -37,7 +37,7 @@ body {
 
 .header-rp img {
     width: 50% !important;
-    mix-blend-mode: overlay;
+    mix-blend-mode: overlay !important;
 }
 
 .date {
