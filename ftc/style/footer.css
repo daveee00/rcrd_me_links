@@ -7,7 +7,9 @@ footer {
   justify-content: bottom;
   align-items: center;
   position: relative;
-  background: black;
+  background: url(https://rcrdme-gnmr.netlify.app/greybg-dark.gif);
+  background-size: cover;
+  background-position: center;
 }
 
 #previous,
