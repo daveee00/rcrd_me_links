@@ -107,6 +107,7 @@
   position: relative;
   padding: 64px 0px 0px 0px;
   mix-blend-mode: overlay;
+  margin-top: 64px;
 }
 
 .scroll-wrapper {
