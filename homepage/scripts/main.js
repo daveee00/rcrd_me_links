@@ -149,6 +149,7 @@
       "https://rcrdme-gnmr.netlify.app/blender-exp/thelotradio.glb",
       "https://rcrdme-gnmr.netlify.app/blender-exp/haudio.glb",
       "https://rcrdme-gnmr.netlify.app/blender-exp/vena.glb",
+      "https://rcrdme-gnmr.netlify.app/blender-exp/lesenfants.glb",
     ];
 
     const videoBG = [
