@@ -843,6 +843,7 @@
         performanceTitle.id = "performance-title";
         performanceTitle.style.color = "white";
         performanceTitle.style.margin = "0px";
+        performanceTitle.style.marginBottom = "8px";
         performanceTitle.style.padding = "0px";
         performanceTitle.style.fontSize =
           window.innerWidth <= 428 ? "2em" : "3em";
