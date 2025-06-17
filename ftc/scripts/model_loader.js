@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
   camera.lookAt(0, 0, 0);
   scene = new THREE.Scene();
   // Lights
-  const hemiLight = new THREE.HemisphereLight(0xffffff, 0xffffff, 1);
+  const hemiLight = new THREE.HemisphereLight(0xffffff, 0xffffff, 2);
   hemiLight.position.set(10, 0, 10);
   scene.add(hemiLight);
 
