@@ -73,14 +73,14 @@ footer {
     display: none;
     position: fixed;
     bottom: 8%;
-    right: 16px !important;
+    right: 32px !important;
     background: none;
     color: #fff !important;
     border: none;
     border-radius: 0;
     width: auto;
     height: auto;
-    font-size: 0.85rem;
+    font-size: 0.5rem;
     cursor: pointer;
     box-shadow: none;
     transition: color 0.2s, opacity 0.3s;
