@@ -128,7 +128,7 @@
     ];
 
     const data_luogo = [
-      "00.00.2020, Berlino",
+      "16.03.2022, Berlino",
       "15.03.2025, Bangkok",
       "02.05.2023-05.05.2023, Marocco",
       "29.03.2020, Melbourne",
