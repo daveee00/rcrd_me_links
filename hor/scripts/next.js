@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Add click event listener to navigate
   container.addEventListener("click", function () {
     window.location.href =
-      "https://wddc-slipknot.webflow.io/performances/radio-pirate";
+      "https://wddc-slipknot.webflow.io/performances/the-lot-radio";
   });
 
   let clock = new THREE.Clock();
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Model loader
   const loader = new THREE.GLTFLoader();
   loader.load(
-    "https://rcrdme-gnmr.netlify.app/blender-exp/radiopirate.glb",
+    "https://rcrdme-gnmr.netlify.app/blender-exp/thelotradio.glb",
     function (gltf) {
       model = gltf.scene;
       model.scale.set(10, 10, 10);
