@@ -124,7 +124,7 @@
       "THE LOT RADIO",
       "RADIO PIRATE",
       "TELLER",
-      "TECKNO BIRRETTE",
+      "TEKNO BIRRETTE",
     ];
 
     const data_luogo = [
