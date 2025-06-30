@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function() {
     "https://rcrdme-gnmr.netlify.app/blender-exp/lotradio-disco.glb", // <-- update this path if needed
     function (gltf) {
       model = gltf.scene;
-      model.scale.set(11, 11, 11);
+      model.scale.set(5, 5, 5);
       model.position.set(0, 0, 0);
       model.rotation.set(Math.PI / 2, 0, Math.PI / 2); // 90deg in radians
       scene.add(model);
