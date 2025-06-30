@@ -3576,8 +3576,6 @@ body.loaded #loading-overlay {
   pointer-events: auto;
 }
 
-
-
 .buttons-container a {
   pointer-events: auto;
 }
@@ -3608,7 +3606,7 @@ body.loaded #loading-overlay {
   bottom: 10vh;
   right: 32px;
   width: fit-content;
-  height: auto; 
+  height: 100vh; 
 }
 
 .scroll-indicator > * {
