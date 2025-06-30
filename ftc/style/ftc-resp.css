@@ -58,7 +58,7 @@ footer {
   
   
   #back-to-top {
-    color: rgb(255, 255, 255);
+    color: white;
     text-decoration: none;
     background: none;
     border: none;
@@ -446,7 +446,6 @@ footer {
 
 * {
     font-family: "ibm-plex-mono", sans-serif;
-    color: #fbfb6e;
     box-sizing: border-box;
   }
   
