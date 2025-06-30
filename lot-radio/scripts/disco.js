@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
   // Model loader
   const loader = new THREE.GLTFLoader();
   loader.load(
-    "https://rcrdme-gnmr.netlify.app/blender-exp/hor-disco3.glb", // <-- update this path if needed
+    "https://rcrdme-gnmr.netlify.app/blender-exp/lotradio-disco.glb", // <-- update this path if needed
     function (gltf) {
       model = gltf.scene;
       model.scale.set(11, 11, 11);
