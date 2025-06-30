@@ -155,12 +155,12 @@
       "https://rcrdme-gnmr.netlify.app/homepage/videobg-dark-grey.mp4",
       "https://rcrdme-gnmr.netlify.app/backgrounds/ftc.mp4",
       "https://rcrdme-gnmr.netlify.app/homepage/videobg-dark-grey.mp4",
+      "https://rcrdme-gnmr.netlify.app/backgrounds/haudio-bg.mp4",
+      "https://rcrdme-gnmr.netlify.app/backgrounds/hor-bg.mp4",
       "https://rcrdme-gnmr.netlify.app/homepage/videobg-dark-grey.mp4",
-      "https://rcrdme-gnmr.netlify.app/backgrounds/hor.mp4",
-      "https://rcrdme-gnmr.netlify.app/homepage/videobg-dark-grey.mp4",
-      "https://rcrdme-gnmr.netlify.app/homepage/videobg-dark-grey.mp4",
+      "https://rcrdme-gnmr.netlify.app/backgrounds/lotradio-bg.mp4",
       "https://rcrdme-gnmr.netlify.app/backgrounds/pirate.mp4",
-      "https://rcrdme-gnmr.netlify.app/homepage/videobg-dark-grey.mp4",
+      "https://rcrdme-gnmr.netlify.app/backgrounds/teller-bg.mp4",
       "https://rcrdme-gnmr.netlify.app/backgrounds/tekno.mp4",
     ];
 
