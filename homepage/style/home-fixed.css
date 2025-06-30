@@ -2314,78 +2314,6 @@ body {
   background-size: cover;
   height: 100vh;
 }
-
-.social-buttons-container {
-  z-index: 1000;
-  opacity: 0.4;
-  flex-direction: column;
-  gap: 30px;
-  display: flex;
-  position: fixed;
-  top: 74%;
-  left: 32px;
-}
-
-.apple-music-link {
-  margin-right: 10px;
-  display: inline-block;
-}
-
-.scroll-indicator {
-  z-index: 1000;
-  opacity: 0.4;
-  pointer-events: none;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 1.5rem;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  position: fixed;
-}
-
-.scroll-text {
-  color: #fff9;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  transform-origin: 100%;
-  white-space: nowrap;
-  font-size: 0.8rem;
-  position: absolute;
-  top: 70%;
-  right: 32px;
-  transform: rotate(90deg);
-}
-
-.scroll-text-footer {
-  color: #fff9;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  transform-origin: 100%;
-  white-space: nowrap;
-  font-size: 0.8rem;
-  position: absolute;
-  top: 90%;
-  right: 32px;
-  z-index: 10;
-  transform: rotate(90deg);
-}
-
-#link-tree:hover {
-  cursor: pointer;
-}
-
-.scroll-line {
-  background-color: var(--_colors---basic--white);
-  width: 2px;
-  height: 100px;
-  margin-top: 2rem;
-  position: absolute;
-  top: 70%;
-  right: 32px;
-  overflow: hidden;
-}
-
 .div-block {
   width: 75vw;
   height: 50vh;
@@ -3588,43 +3516,6 @@ body.loaded #loading-overlay {
   opacity: calc(100%);
   transform: scale(1.5);
 }
-
-/* Scroll Indicator */
-.scroll-indicator {
-  z-index: 1000;
-  opacity: 0.7;
-  pointer-events: none;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 1.5rem;
-  height: fit-content;
-  display: flex;
-  position: fixed;
-  bottom: 10vh;
-  right: 32px;
-  width: fit-content;
-  height: 100vh; 
-}
-
-.scroll-indicator > * {
-  pointer-events: none;
-}
-
-.scroll-text {
-  color: #ffffff;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-size: 0.8rem;
-  font-family: "ibm-plex-mono", sans-serif;
-  font-style: normal;
-  font-weight: 600;
-  right: 32px;
-  display: inline-block;
-  writing-mode: vertical-rl;
-  mix-blend-mode: overlay;
-  pointer-events: none;
-}
-
 .about-button {
   color: rgb(255, 255, 255);
   text-transform: uppercase;
@@ -3649,53 +3540,6 @@ body.loaded #loading-overlay {
   cursor: pointer;
 }
 
-.scroll-line {
-  background-color: #ffffff;
-  width: 2px;
-  height: 100px;
-  margin-top: 2rem;
-  position: relative;
-  overflow: hidden;
-  pointer-events: none;
-}
-
-.scroll-line::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  animation: scrollLine 1.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-}
-@keyframes scrollLine {
-  0% {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-  20% {
-    opacity: 1;
-  }
-  80% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(100%);
-    opacity: 0;
-  }
-}
-/* Fade out when scrolled */
-.scroll-indicator.fade-out {
-  opacity: 0;
-  transition: opacity 0.5s ease;
-}
-.fade-out {
-  opacity: 0;
-  transition: opacity 0.4s;
-  pointer-events: none;
-}
-
 @media screen and (max-width: 428px) {
   .buttons-container {
     display: flex;
@@ -3717,53 +3561,7 @@ body.loaded #loading-overlay {
     pointer-events: auto;
     z-index: 2;
   }
-
-  .scroll-indicator {
-    z-index: 2;
-    opacity: 0.7;
-    pointer-events: none;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 1.5rem;
-    padding: 16px;
-    height: fit-content;
-    display: flex;
-    position: fixed;
-    top: 68%;
-    right: 0;
-  }
   
-  .scroll-indicator > * {
-    pointer-events: none;
-  }
-  
-  .scroll-text {
-    color: #ffffff;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    font-size: 0.8rem;
-    font-family: "ibm-plex-mono", sans-serif;
-    font-style: normal;
-    font-weight: 600;
-    mix-blend-mode: overlay;
-    pointer-events: none;
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
-    display: inline-block;
-  }
-
-  .scroll-line {
-    background-color: #ffffff;
-    width: 2px;
-    height: 100px;
-    margin-top: 2rem;
-    position: absolute;
-    top: 70%;
-    right: 16px;
-    overflow: hidden;
-    pointer-events: none;
-  }
-
   .about-button {
     color: rgb(255, 255, 255);
     text-transform: uppercase;
