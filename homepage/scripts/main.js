@@ -151,9 +151,9 @@
 
     const videoBG = [
       "https://rcrdme-gnmr.netlify.app/homepage/videobg-dark-grey.mp4",
-      "https://rcrdme-gnmr.netlify.app/backgrounds/elsewhere.mp4",
+      "https://rcrdme-gnmr.netlify.app/backgrounds/elsewhere-bg.mp4",
       "https://rcrdme-gnmr.netlify.app/homepage/videobg-dark-grey.mp4",
-      "https://rcrdme-gnmr.netlify.app/backgrounds/ftc.mp4",
+      "https://rcrdme-gnmr.netlify.app/backgrounds/forthecause-bg.mp4",
       "https://rcrdme-gnmr.netlify.app/homepage/videobg-dark-grey.mp4",
       "https://rcrdme-gnmr.netlify.app/backgrounds/haudio-bg.mp4",
       "https://rcrdme-gnmr.netlify.app/backgrounds/hor-bg.mp4",
