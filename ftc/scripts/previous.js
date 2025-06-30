@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Add click event listener to navigate
   container.addEventListener("click", function() {
-    window.location.href = "https://wddc-slipknot.webflow.io/performances/elsewhere-seoul";
+    window.location.href = "https://wddc-slipknot.webflow.io/performances/elsewhere";
   });
 
   let clock = new THREE.Clock();
