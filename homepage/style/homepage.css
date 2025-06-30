@@ -3602,12 +3602,13 @@ body.loaded #loading-overlay {
   justify-content: flex-end;
   align-items: center;
   gap: 1.5rem;
-  padding: 32px;
   height: fit-content;
   display: flex;
   position: fixed;
-  top: 70%;
-  right: 0;
+  bottom: 10vh;
+  right: 32px;
+  width: fit-content;
+  height: auto; 
 }
 
 .scroll-indicator > * {
@@ -3618,16 +3619,13 @@ body.loaded #loading-overlay {
   color: #ffffff;
   text-transform: uppercase;
   letter-spacing: 3px;
-  transform-origin: 100%;
-  white-space: nowrap;
   font-size: 0.8rem;
   font-family: "ibm-plex-mono", sans-serif;
   font-style: normal;
   font-weight: 600;
-  position: absolute;
-  top: 78%;
   right: 32px;
-  transform: rotate(90deg);
+  display: inline-block;
+  writing-mode: vertical-rl;
   mix-blend-mode: overlay;
   pointer-events: none;
 }
@@ -3661,9 +3659,7 @@ body.loaded #loading-overlay {
   width: 2px;
   height: 100px;
   margin-top: 2rem;
-  position: absolute;
-  top: 78%;
-  right: 32px;
+  position: relative;
   overflow: hidden;
   pointer-events: none;
 }
