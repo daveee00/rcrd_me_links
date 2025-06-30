@@ -2338,13 +2338,10 @@ body {
   justify-content: flex-end;
   align-items: center;
   gap: 1.5rem;
-  width: 99vw;
-  height: 99vh;
-  padding: 32px;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   position: fixed;
-  top: 1.5%;
-  right: 0;
 }
 
 .scroll-text {
