@@ -3741,18 +3741,15 @@ body.loaded #loading-overlay {
     color: #ffffff;
     text-transform: uppercase;
     letter-spacing: 3px;
-    transform-origin: 100%;
-    white-space: nowrap;
     font-size: 0.8rem;
     font-family: "ibm-plex-mono", sans-serif;
     font-style: normal;
     font-weight: 600;
-    position: absolute;
-    top: 60%;
-    right: 16px;
-    transform: rotate(90deg);
     mix-blend-mode: overlay;
     pointer-events: none;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    display: inline-block;
   }
 
   .scroll-line {
