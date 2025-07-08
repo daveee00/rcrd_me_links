@@ -321,7 +321,8 @@ footer {
   
   .video-box {
   width: 1235px;
-  height: 771px;
+  /*height: 771px;*/
+      height: fit-content;
   margin: 200px auto 0 auto;
   overflow: hidden;
       background: none !important;
